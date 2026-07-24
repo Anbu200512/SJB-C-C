@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - SJB C&C | Construction Photo & Video Gallery</title>
+  <meta name="description" content="Browse SJB C&C's construction gallery featuring project photos, drone footage, progress shots, and completed works across Pakistan.">
+  <meta name="keywords" content="construction gallery, building photos, drone images, project gallery, construction progress">
+  <meta property="og:title" content="Gallery - SJB C&C">
+  <link rel="canonical" href="https://sjbcc.com/gallery">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: '#0F172A', secondary: '#D97706', accent: '#F59E0B', dark: '#111827', success: '#16A34A' }, fontFamily: { poppins: ['Poppins', 'sans-serif'], inter: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter bg-slate-50">
+  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-secondary to-accent z-[9999]"></div>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero -->
+  <section class="relative pt-32 pb-20 bg-slate-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80" alt="Construction gallery" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/60"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-aos="fade-up">
+        <span class="text-amber-500 text-sm font-semibold tracking-wider uppercase">Gallery</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Visual<br><span class="text-amber-500">Showcase</span></h1>
+        <p class="text-gray-400 text-lg max-w-xl">Explore our construction projects through photos, drone footage, and progress documentation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Gallery -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up">
+        <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-amber-500 text-white border border-amber-500 transition-all duration-300" data-filter="all">All</button>
+        <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="residential">Residential</button>
+        <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="commercial">Commercial</button>
+        <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="drone">Drone Shots</button>
+        <button class="gallery-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="progress">Progress</button>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Green Valley Residences exterior" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer md:row-span-2" data-category="commercial" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="Apex Business Tower glass facade" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 min-h-[300px]">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Aerial view of construction site" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&q=80" alt="Construction progress crane" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80" alt="Lakeside Villas modern home" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="commercial" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Heritage Mall interior design" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&q=80" alt="Drone view of industrial complex" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&q=80" alt="Industrial construction in progress" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Sunset Heights apartment complex" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="commercial" data-aos="fade-up" data-aos-delay="450">
+          <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=500&q=80" alt="Skyline Corporate Hub at night" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="500">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" alt="Aerial view of completed project" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="550">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="Team reviewing construction plans" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Close lightbox"><i class="fas fa-times text-xl"></i></button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+    <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg">
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <button id="back-to-top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-amber-500 hover:bg-amber-600 text-white shadow-lg shadow-amber-500/30 flex items-center justify-center opacity-0 invisible transition-all duration-300" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>AOS.init({ duration: 800, once: true, offset: 50 });</script>
+  <script src="js/footer.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
