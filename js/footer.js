@@ -39,31 +39,25 @@ function getBasePath() {
 
 function initNavbarJS() {
   const navbar = document.getElementById('navbar');
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileMenuClose = document.getElementById('mobile-menu-close');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('mobile-menu-close');
+  const navLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (!navbar) return;
 
-  // Sticky navbar on scroll
-  let lastScroll = 0;
+  // ── Sticky navbar background ──
   function handleScroll() {
-    const scrollY = window.scrollY;
-    if (scrollY > 50) {
+    if (window.scrollY > 50) {
       navbar.classList.add('bg-slate-900/95', 'backdrop-blur-xl', 'shadow-xl');
-    } else {
-      if (!mobileMenu || !mobileMenu.classList.contains('translate-x-0')) {
-        navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-xl', 'shadow-xl');
-      }
+    } else if (!isMenuOpen()) {
+      navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-xl', 'shadow-xl');
     }
-    lastScroll = scrollY;
   }
-
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // Active nav link
+  // ── Active nav link ──
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
     if (link.getAttribute('href') === currentPage) {
@@ -71,41 +65,55 @@ function initNavbarJS() {
     }
   });
 
-  // Store scroll position for iOS-safe lock
-  let scrollPos = 0;
+  // ── Mobile menu state ──
+  let savedScrollY = 0;
 
-  // Mobile menu open
-  function openMobileMenu() {
-    if (!mobileMenu) return;
+  function isMenuOpen() {
+    return menu && menu.classList.contains('is-open');
+  }
 
-    // Save scroll position
-    scrollPos = window.scrollY || document.documentElement.scrollTop;
+  function openMenu() {
+    if (!menu || !menuBtn) return;
 
-    mobileMenu.classList.remove('translate-x-full');
-    mobileMenu.classList.add('translate-x-0');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    mobileMenuBtn.classList.add('active');
-    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    // Save scroll position before locking
+    savedScrollY = window.scrollY;
 
-    // Lock body scroll - iOS safe method
+    // Show overlay
+    menu.classList.remove('opacity-0', 'pointer-events-none');
+    menu.classList.add('opacity-100', 'pointer-events-auto', 'is-open');
+    menu.setAttribute('aria-hidden', 'false');
+
+    // Hamburger → X
+    menuBtn.classList.add('is-active');
+    menuBtn.setAttribute('aria-expanded', 'true');
+
+    // Lock body — iOS-safe: set position fixed with negative top
     document.body.style.position = 'fixed';
-    document.body.style.top = '-' + scrollPos + 'px';
+    document.body.style.top = '-' + savedScrollY + 'px';
     document.body.style.left = '0';
     document.body.style.right = '0';
     document.body.style.overflow = 'hidden';
+
+    // Stagger animate nav links
+    const links = menu.querySelectorAll('.mobile-nav-link');
+    links.forEach((link, i) => {
+      link.style.transitionDelay = (0.05 + i * 0.04) + 's';
+    });
   }
 
-  // Mobile menu close
-  function closeMobileMenu() {
-    if (!mobileMenu) return;
+  function closeMenu() {
+    if (!menu || !menuBtn) return;
 
-    mobileMenu.classList.add('translate-x-full');
-    mobileMenu.classList.remove('translate-x-0');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    mobileMenuBtn.classList.remove('active');
-    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    // Hide overlay
+    menu.classList.remove('opacity-100', 'pointer-events-auto', 'is-open');
+    menu.classList.add('opacity-0', 'pointer-events-none');
+    menu.setAttribute('aria-hidden', 'true');
 
-    // Unlock body scroll - restore position
+    // X → hamburger
+    menuBtn.classList.remove('is-active');
+    menuBtn.setAttribute('aria-expanded', 'false');
+
+    // Unlock body
     document.body.style.position = '';
     document.body.style.top = '';
     document.body.style.left = '';
@@ -113,56 +121,53 @@ function initNavbarJS() {
     document.body.style.overflow = '';
 
     // Restore scroll position
-    window.scrollTo(0, scrollPos);
-  }
+    window.scrollTo(0, savedScrollY);
 
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (mobileMenu.classList.contains('translate-x-0')) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
+    // Reset link delays
+    const links = menu.querySelectorAll('.mobile-nav-link');
+    links.forEach(link => {
+      link.style.transitionDelay = '0s';
     });
   }
 
-  if (mobileMenuClose) {
-    mobileMenuClose.addEventListener('click', (e) => {
+  // ── Button events ──
+  if (menuBtn) {
+    menuBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      closeMobileMenu();
+      e.stopPropagation();
+      isMenuOpen() ? closeMenu() : openMenu();
     });
   }
 
-  mobileNavLinks.forEach(link => {
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMenu();
+    });
+  }
+
+  // ── Close on link tap ──
+  navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Small delay so the navigation starts before menu closes
-      setTimeout(closeMobileMenu, 50);
+      closeMenu();
     });
   });
 
-  // Close on escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
-      closeMobileMenu();
-    }
+  // ── Close on Escape ──
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMenuOpen()) closeMenu();
   });
 
-  // Close on resize to desktop
-  const mql = window.matchMedia('(min-width: 1024px)');
-  mql.addEventListener('change', (e) => {
-    if (e.matches && mobileMenu.classList.contains('translate-x-0')) {
-      closeMobileMenu();
-    }
+  // ── Close on resize to desktop ──
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
+    if (e.matches && isMenuOpen()) closeMenu();
   });
 
-  // Prevent touchmove scrolling on body when menu is open
+  // ── Block background scroll when menu open (iOS) ──
   document.addEventListener('touchmove', (e) => {
-    if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
-      // Only prevent on the body/overlay, allow scrolling inside the menu content
-      if (!mobileMenu.contains(e.target)) {
-        e.preventDefault();
-      }
+    if (isMenuOpen() && !menu.contains(e.target)) {
+      e.preventDefault();
     }
   }, { passive: false });
 }
