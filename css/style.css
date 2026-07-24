@@ -265,11 +265,14 @@ img { max-width: 100%; height: auto; }
 #mobile-menu {
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  will-change: transform;
 }
+
+/* Nav link entrance animation */
 #mobile-menu .mobile-nav-link {
   opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.3s ease;
+  transform: translateY(20px);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -webkit-tap-highlight-color: transparent;
   min-height: 44px;
   display: flex;
@@ -278,25 +281,35 @@ img { max-width: 100%; height: auto; }
 }
 #mobile-menu.translate-x-0 .mobile-nav-link {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(1) { transition-delay: 0.1s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(2) { transition-delay: 0.15s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(3) { transition-delay: 0.2s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(4) { transition-delay: 0.25s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(5) { transition-delay: 0.3s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(6) { transition-delay: 0.35s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(7) { transition-delay: 0.4s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(8) { transition-delay: 0.45s; }
-#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(9) { transition-delay: 0.5s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(1) { transition-delay: 0.05s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(2) { transition-delay: 0.1s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(3) { transition-delay: 0.15s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(4) { transition-delay: 0.2s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(5) { transition-delay: 0.25s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(6) { transition-delay: 0.3s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(7) { transition-delay: 0.35s; }
+#mobile-menu.translate-x-0 .mobile-nav-link:nth-child(8) { transition-delay: 0.4s; }
 
 /* ============================================
    HAMBURGER ANIMATION
+   3 lines: each 2px tall, 5px gap between
+   Total: 2+5+2+5+2 = 16px height
    ============================================ */
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .hamburger-lines span {
   display: block;
   transform-origin: center;
+  will-change: transform, opacity;
 }
+
+/* Active state: X shape */
 #mobile-menu-btn.active .hamburger-lines span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -305,7 +318,6 @@ img { max-width: 100%; height: auto; }
   transform: scaleX(0);
 }
 #mobile-menu-btn.active .hamburger-lines span:nth-child(3) {
-  width: 20px;
   transform: translateY(-7px) rotate(-45deg);
 }
 
@@ -315,7 +327,7 @@ img { max-width: 100%; height: auto; }
 a, button, input, select, textarea {
   -webkit-tap-highlight-color: transparent;
 }
-button, a.nav-link, .mobile-nav-link, .faq-question, .project-filter-btn, .gallery-filter-btn, .blog-cat-btn {
+button, a.nav-link, .mobile-nav-link, .faq-question, .project-filter-btn, .gallery-filter-btn {
   min-height: 44px;
   min-width: 44px;
 }
@@ -406,11 +418,11 @@ button, a.nav-link, .mobile-nav-link, .faq-question, .project-filter-btn, .galle
 }
 
 /* ============================================
-   FORMS: Mobile-friendly inputs
+   FORMS: Mobile-friendly inputs (prevent iOS zoom)
    ============================================ */
 @media (max-width: 640px) {
   input, select, textarea {
-    font-size: 16px !important; /* Prevents iOS zoom on focus */
+    font-size: 16px !important;
   }
 }
 
@@ -459,6 +471,14 @@ img.object-cover {
    ============================================ */
 .max-w-7xl, .max-w-6xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
   max-width: 100%;
+}
+
+/* ============================================
+   MOBILE MENU: Body lock state
+   ============================================ */
+body.menu-open {
+  position: fixed;
+  overflow: hidden;
 }
 
 /* ============================================

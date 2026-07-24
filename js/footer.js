@@ -15,7 +15,7 @@ async function fetchNavbar() {
     if (!resp.ok) return;
     const html = await resp.text();
     navbarEl.outerHTML = html;
-    setTimeout(() => initNavbarJS(), 150);
+    setTimeout(() => initNavbarJS(), 100);
   } catch (e) { console.warn('Navbar load failed', e); }
 }
 
@@ -47,14 +47,17 @@ function initNavbarJS() {
   if (!navbar) return;
 
   // Sticky navbar on scroll
+  let lastScroll = 0;
   function handleScroll() {
-    if (window.scrollY > 50) {
+    const scrollY = window.scrollY;
+    if (scrollY > 50) {
       navbar.classList.add('bg-slate-900/95', 'backdrop-blur-xl', 'shadow-xl');
     } else {
       if (!mobileMenu || !mobileMenu.classList.contains('translate-x-0')) {
         navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-xl', 'shadow-xl');
       }
     }
+    lastScroll = scrollY;
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });
@@ -68,30 +71,54 @@ function initNavbarJS() {
     }
   });
 
+  // Store scroll position for iOS-safe lock
+  let scrollPos = 0;
+
   // Mobile menu open
   function openMobileMenu() {
     if (!mobileMenu) return;
+
+    // Save scroll position
+    scrollPos = window.scrollY || document.documentElement.scrollTop;
+
     mobileMenu.classList.remove('translate-x-full');
     mobileMenu.classList.add('translate-x-0');
+    mobileMenu.setAttribute('aria-hidden', 'false');
     mobileMenuBtn.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+
+    // Lock body scroll - iOS safe method
     document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
+    document.body.style.top = '-' + scrollPos + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.overflow = 'hidden';
   }
 
   // Mobile menu close
   function closeMobileMenu() {
     if (!mobileMenu) return;
+
     mobileMenu.classList.add('translate-x-full');
     mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.setAttribute('aria-hidden', 'true');
     mobileMenuBtn.classList.remove('active');
-    document.body.style.overflow = '';
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+
+    // Unlock body scroll - restore position
     document.body.style.position = '';
-    document.body.style.width = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.overflow = '';
+
+    // Restore scroll position
+    window.scrollTo(0, scrollPos);
   }
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (mobileMenu.classList.contains('translate-x-0')) {
         closeMobileMenu();
       } else {
@@ -100,11 +127,17 @@ function initNavbarJS() {
     });
   }
 
-  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMobileMenu();
+    });
+  }
 
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
-      setTimeout(closeMobileMenu, 100);
+      // Small delay so the navigation starts before menu closes
+      setTimeout(closeMobileMenu, 50);
     });
   });
 
@@ -118,16 +151,20 @@ function initNavbarJS() {
   // Close on resize to desktop
   const mql = window.matchMedia('(min-width: 1024px)');
   mql.addEventListener('change', (e) => {
-    if (e.matches) closeMobileMenu();
+    if (e.matches && mobileMenu.classList.contains('translate-x-0')) {
+      closeMobileMenu();
+    }
   });
 
-  // Prevent scroll bounce on iOS when menu is open
-  let touchStartY = 0;
-  if (mobileMenu) {
-    mobileMenu.addEventListener('touchstart', (e) => {
-      touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-  }
+  // Prevent touchmove scrolling on body when menu is open
+  document.addEventListener('touchmove', (e) => {
+    if (mobileMenu && mobileMenu.classList.contains('translate-x-0')) {
+      // Only prevent on the body/overlay, allow scrolling inside the menu content
+      if (!mobileMenu.contains(e.target)) {
+        e.preventDefault();
+      }
+    }
+  }, { passive: false });
 }
 
 function initBackToTop() {

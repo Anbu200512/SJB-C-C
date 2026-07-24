@@ -3,7 +3,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 sm:h-20">
       <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0 relative z-[60]">
         <div class="w-10 h-10 sm:w-12 sm:h-12 bg-amber-500 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
           <i class="fas fa-hard-hat text-white text-lg sm:text-xl"></i>
         </div>
@@ -27,7 +27,7 @@
       </nav>
 
       <!-- CTA + Hamburger -->
-      <div class="flex items-center gap-2 sm:gap-4">
+      <div class="flex items-center gap-2 sm:gap-4 relative z-[60]">
         <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 px-5 xl:px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 transform hover:-translate-y-0.5">
           <i class="fas fa-phone-alt text-xs"></i>
           Get Free Quote
@@ -35,11 +35,11 @@
         <a href="tel:+919876543210" class="lg:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-green-500 text-white hover:bg-green-600 transition-colors" aria-label="Call us">
           <i class="fas fa-phone-alt text-sm"></i>
         </a>
-        <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-white/10 text-white navbar-text active:bg-white/20 transition-colors" aria-label="Toggle menu">
-          <div class="hamburger-lines flex flex-col gap-1.5">
-            <span class="block w-5 h-0.5 bg-current transition-all duration-300"></span>
-            <span class="block w-5 h-0.5 bg-current transition-all duration-300"></span>
-            <span class="block w-3.5 h-0.5 bg-current transition-all duration-300"></span>
+        <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl bg-white/10 text-white navbar-text active:bg-white/20 transition-colors" aria-label="Toggle menu" aria-expanded="false">
+          <div class="hamburger-lines flex flex-col justify-center items-center w-5 h-5">
+            <span class="block w-5 h-0.5 bg-current transition-all duration-300 origin-center"></span>
+            <span class="block w-5 h-0.5 bg-current transition-all duration-300 origin-center mt-[5px]"></span>
+            <span class="block w-5 h-0.5 bg-current transition-all duration-300 origin-center mt-[5px]"></span>
           </div>
         </button>
       </div>
@@ -47,23 +47,25 @@
   </div>
 
   <!-- Mobile Menu - Full screen overlay -->
-  <div id="mobile-menu" class="fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 lg:hidden">
-    <div class="flex flex-col items-center justify-center h-full gap-4 sm:gap-6 px-6 overflow-y-auto">
-      <button id="mobile-menu-close" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors" aria-label="Close menu">
-        <i class="fas fa-times text-lg"></i>
+  <div id="mobile-menu" class="fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-50 transform translate-x-full transition-transform duration-400 lg:hidden" aria-hidden="true">
+    <div class="flex flex-col items-center justify-center h-full gap-3 sm:gap-5 px-6 overflow-y-auto pt-20 pb-8">
+      <button id="mobile-menu-close" class="fixed top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors z-[60]" aria-label="Close menu">
+        <i class="fas fa-times text-xl"></i>
       </button>
-      <a href="index.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Home</a>
-      <a href="about.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">About</a>
-      <a href="services.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Services</a>
-      <a href="projects.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Projects</a>
-      <a href="gallery.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Gallery</a>
-      <a href="testimonials.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Reviews</a>
-      <a href="faq.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">FAQ</a>
-      <a href="contact.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-2">Contact</a>
-      <a href="contact.html" class="mobile-nav-link mt-4 px-8 py-3.5 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-semibold rounded-full transition-all duration-300 text-lg w-full max-w-[280px] text-center">Get Free Quote</a>
-      <a href="tel:+919876543210" class="mobile-nav-link mt-2 px-8 py-3.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-semibold rounded-full transition-all duration-300 text-lg w-full max-w-[280px] text-center flex items-center justify-center gap-2">
-        <i class="fas fa-phone-alt text-sm"></i> Call Now
-      </a>
+      <a href="index.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Home</a>
+      <a href="about.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">About</a>
+      <a href="services.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Services</a>
+      <a href="projects.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Projects</a>
+      <a href="gallery.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Gallery</a>
+      <a href="testimonials.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Reviews</a>
+      <a href="faq.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link text-xl sm:text-2xl font-semibold text-white hover:text-amber-500 transition-colors duration-300 py-3 w-full text-center">Contact</a>
+      <div class="w-full max-w-[280px] mt-4 space-y-3">
+        <a href="contact.html" class="mobile-nav-link px-8 py-4 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-semibold rounded-full transition-all duration-300 text-lg w-full text-center block">Get Free Quote</a>
+        <a href="tel:+919876543210" class="mobile-nav-link px-8 py-4 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-semibold rounded-full transition-all duration-300 text-lg w-full text-center flex items-center justify-center gap-2">
+          <i class="fas fa-phone-alt text-sm"></i> Call Now
+        </a>
+      </div>
     </div>
   </div>
 </header>
