@@ -1,80 +1,156 @@
-<!-- Navbar Component -->
-<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<header id="navbar" class="navbar-premium fixed top-0 left-0 w-full z-50">
+  <div class="navbar-glass"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     <div class="flex items-center justify-between h-16 sm:h-20">
 
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0 relative z-[60]">
-        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-amber-500 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-          <i class="fas fa-hard-hat text-white text-lg sm:text-xl"></i>
+      <!-- Logo with glow -->
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 relative z-[60] group">
+        <div class="logo-icon-wrap">
+          <div class="logo-icon">
+            <i class="fas fa-hard-hat text-white text-lg sm:text-xl"></i>
+          </div>
+          <div class="logo-glow"></div>
         </div>
         <div>
-          <span class="text-lg sm:text-xl font-bold text-white font-poppins tracking-tight navbar-text">SJB</span>
-          <span class="text-lg sm:text-xl font-bold text-amber-500 font-poppins tracking-tight"> C&C</span>
-          <p class="text-[9px] sm:text-[10px] text-gray-300 navbar-text -mt-1 tracking-widest uppercase hidden sm:block">Construction &amp; Contracting</p>
+          <div class="flex items-baseline gap-0">
+            <span class="text-lg sm:text-xl font-extrabold text-white font-poppins tracking-tight">SJB</span>
+            <span class="text-lg sm:text-xl font-extrabold text-amber-400 font-poppins tracking-tight"> C&C</span>
+          </div>
+          <p class="text-[8px] sm:text-[9px] text-gray-400 -mt-0.5 tracking-[0.2em] uppercase hidden sm:block font-medium">Construction &amp; Contracting</p>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex items-center gap-1">
-        <a href="index.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Home</a>
-        <a href="about.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">About</a>
-        <a href="services.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Services</a>
-        <a href="projects.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Projects</a>
-        <a href="gallery.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Gallery</a>
-        <a href="testimonials.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Reviews</a>
-        <a href="faq.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">FAQ</a>
-        <a href="contact.html" class="nav-link px-3 xl:px-4 py-2 text-sm font-medium text-white navbar-text rounded-lg hover:bg-white/10 transition-all duration-300">Contact</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-0.5">
+        <a href="index.html" class="nav-link" data-page="index.html">
+          <span class="nav-link-text">Home</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="about.html" class="nav-link" data-page="about.html">
+          <span class="nav-link-text">About</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="services.html" class="nav-link" data-page="services.html">
+          <span class="nav-link-text">Services</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="projects.html" class="nav-link" data-page="projects.html">
+          <span class="nav-link-text">Projects</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="gallery.html" class="nav-link" data-page="gallery.html">
+          <span class="nav-link-text">Gallery</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="testimonials.html" class="nav-link" data-page="testimonials.html">
+          <span class="nav-link-text">Reviews</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="faq.html" class="nav-link" data-page="faq.html">
+          <span class="nav-link-text">FAQ</span>
+          <span class="nav-link-bar"></span>
+        </a>
+        <a href="contact.html" class="nav-link" data-page="contact.html">
+          <span class="nav-link-text">Contact</span>
+          <span class="nav-link-bar"></span>
+        </a>
       </nav>
 
-      <!-- CTA + Hamburger -->
-      <div class="flex items-center gap-2 sm:gap-4 relative z-[60]">
-        <a href="contact.html" class="hidden lg:inline-flex items-center gap-2 px-5 xl:px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 transform hover:-translate-y-0.5">
-          <i class="fas fa-phone-alt text-xs"></i>
-          Get Free Quote
+      <!-- Right Side -->
+      <div class="flex items-center gap-2 sm:gap-3 relative z-[60]">
+        <a href="contact.html" class="cta-quote-btn hidden lg:inline-flex">
+          <span class="cta-quote-bg"></span>
+          <span class="cta-quote-content">
+            <i class="fas fa-bolt text-xs"></i>
+            <span>Get Free Quote</span>
+          </span>
         </a>
-        <a href="tel:+919876543210" class="lg:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-green-500 text-white hover:bg-green-600 transition-colors" aria-label="Call us">
+
+        <a href="tel:+919876543210" class="lg:hidden phone-btn" aria-label="Call us">
+          <div class="phone-ring"></div>
           <i class="fas fa-phone-alt text-sm"></i>
         </a>
-        <button id="mobile-menu-btn" class="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-white/10 text-white navbar-text active:bg-white/20 transition-colors" aria-label="Toggle menu" aria-expanded="false">
-          <span class="hamburger-line hamburger-line-1 block w-5 h-0.5 bg-current rounded-full"></span>
-          <span class="hamburger-line hamburger-line-2 block w-5 h-0.5 bg-current rounded-full"></span>
-          <span class="hamburger-line hamburger-line-3 block w-5 h-0.5 bg-current rounded-full"></span>
+
+        <button id="hamburger-btn" class="lg:hidden hamburger-btn" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-line top-line"></span>
+            <span class="hamburger-line mid-line"></span>
+            <span class="hamburger-line bot-line"></span>
+          </span>
         </button>
       </div>
     </div>
   </div>
+  <div class="navbar-border"></div>
+</header>
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu" class="mobile-menu-overlay fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-[55] opacity-0 pointer-events-none lg:hidden" aria-hidden="true">
-
-    <!-- Close Button -->
-    <button id="mobile-menu-close" class="mobile-close-btn fixed top-4 right-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 z-[60]" aria-label="Close menu">
-      <i class="fas fa-times text-xl"></i>
-    </button>
-
-    <!-- Menu Content - Scrollable -->
-    <div class="mobile-menu-scroll h-full overflow-y-auto pt-24 pb-10 px-6">
-      <nav class="flex flex-col items-center gap-1">
-        <a href="index.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Home</a>
-        <a href="about.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">About</a>
-        <a href="services.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Services</a>
-        <a href="projects.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Projects</a>
-        <a href="gallery.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Gallery</a>
-        <a href="testimonials.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Reviews</a>
-        <a href="faq.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">FAQ</a>
-        <a href="contact.html" class="mobile-nav-link w-full text-center text-xl sm:text-2xl font-semibold text-white py-3 px-4 rounded-xl hover:text-amber-500">Contact</a>
-
-        <!-- CTA Buttons -->
-        <div class="w-full max-w-[280px] mt-6 space-y-3">
-          <a href="contact.html" class="mobile-nav-link block w-full px-8 py-4 bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-semibold rounded-full text-center text-lg">
-            Get Free Quote
-          </a>
-          <a href="tel:+919876543210" class="mobile-nav-link block w-full px-8 py-4 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-semibold rounded-full text-center text-lg">
-            <i class="fas fa-phone-alt text-sm mr-2"></i>Call Now
-          </a>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-bg"></div>
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-logo">
+        <div class="logo-icon" style="width:40px;height:40px;">
+          <i class="fas fa-hard-hat text-white text-base"></i>
         </div>
-      </nav>
+        <div>
+          <div class="flex items-baseline gap-0">
+            <span class="text-base font-extrabold text-white font-poppins">SJB</span>
+            <span class="text-base font-extrabold text-amber-400 font-poppins"> C&C</span>
+          </div>
+          <p class="text-[7px] text-gray-400 tracking-[0.15em] uppercase font-medium">Construction &amp; Contracting</p>
+        </div>
+      </div>
+      <button id="close-menu-btn" class="close-menu-btn" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu-divider"></div>
+
+    <nav class="mobile-menu-nav">
+      <a href="index.html" class="mobile-link">
+        <i class="fas fa-home"></i><span>Home</span>
+      </a>
+      <a href="about.html" class="mobile-link">
+        <i class="fas fa-building"></i><span>About</span>
+      </a>
+      <a href="services.html" class="mobile-link">
+        <i class="fas fa-tools"></i><span>Services</span>
+      </a>
+      <a href="projects.html" class="mobile-link">
+        <i class="fas fa-project-diagram"></i><span>Projects</span>
+      </a>
+      <a href="gallery.html" class="mobile-link">
+        <i class="fas fa-images"></i><span>Gallery</span>
+      </a>
+      <a href="testimonials.html" class="mobile-link">
+        <i class="fas fa-star"></i><span>Reviews</span>
+      </a>
+      <a href="faq.html" class="mobile-link">
+        <i class="fas fa-question-circle"></i><span>FAQ</span>
+      </a>
+      <a href="contact.html" class="mobile-link">
+        <i class="fas fa-envelope"></i><span>Contact</span>
+      </a>
+    </nav>
+
+    <div class="mobile-menu-divider"></div>
+
+    <div class="mobile-cta">
+      <a href="contact.html" class="cta-primary-mobile">
+        <i class="fas fa-bolt"></i>
+        <span>Get Free Quote</span>
+      </a>
+      <a href="tel:+919876543210" class="cta-call-mobile">
+        <i class="fas fa-phone-alt"></i>
+        <span>Call Now</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <a href="tel:+919876543210"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
+      <a href="mailto:info@sjbcc.in"><i class="fas fa-envelope"></i> info@sjbcc.in</a>
     </div>
   </div>
-</header>
+</div>
