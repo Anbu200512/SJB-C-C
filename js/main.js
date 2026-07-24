@@ -1,12 +1,10 @@
 // main.js - Main application logic
 document.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
-  initSearchFunctionality();
-  initBlogCategories();
   initScrollAnimations();
 });
 
-// Form validation
+// Form validation - mobile-friendly
 function initFormValidation() {
   const forms = document.querySelectorAll('.contact-form');
   forms.forEach(form => {
@@ -59,60 +57,14 @@ function initFormValidation() {
             this.reset();
           }, 2000);
         }, 1500);
-      }
-    });
-  });
-}
-
-// Blog search
-function initSearchFunctionality() {
-  const searchInput = document.getElementById('blog-search');
-  const blogCards = document.querySelectorAll('.blog-card');
-  if (!searchInput) return;
-
-  searchInput.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    blogCards.forEach(card => {
-      const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
-      const excerpt = card.querySelector('p')?.textContent.toLowerCase() || '';
-      if (title.includes(query) || excerpt.includes(query)) {
-        card.style.display = '';
-        card.style.opacity = '1';
       } else {
-        card.style.opacity = '0';
-        setTimeout(() => { card.style.display = 'none'; }, 300);
-      }
-    });
-  });
-}
-
-// Blog categories
-function initBlogCategories() {
-  const catBtns = document.querySelectorAll('.blog-cat-btn');
-  const blogCards = document.querySelectorAll('.blog-card');
-
-  catBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      catBtns.forEach(b => {
-        b.classList.remove('bg-amber-500', 'text-white');
-        b.classList.add('bg-slate-100', 'text-slate-700');
-      });
-      btn.classList.add('bg-amber-500', 'text-white');
-      btn.classList.remove('bg-slate-100', 'text-slate-700');
-
-      const cat = btn.getAttribute('data-category');
-      blogCards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (cat === 'all' || cardCat === cat) {
-          card.style.display = '';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(20px)';
-          setTimeout(() => { card.style.display = 'none'; }, 300);
+        // Scroll to first error on mobile
+        const firstError = this.querySelector('.border-red-500');
+        if (firstError && window.innerWidth < 768) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          firstError.focus();
         }
-      });
+      }
     });
   });
 }
@@ -120,6 +72,8 @@ function initBlogCategories() {
 // Scroll-triggered reveal for elements
 function initScrollAnimations() {
   const elements = document.querySelectorAll('.reveal-on-scroll');
+  if (!elements.length) return;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -127,11 +81,7 @@ function initScrollAnimations() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
   elements.forEach(el => observer.observe(el));
 }
-
-// Get current year for copyright
-document.querySelectorAll('.current-year').forEach(el => {
-  el.textContent = new Date().getFullYear();
-});

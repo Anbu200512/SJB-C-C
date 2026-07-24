@@ -1,4 +1,4 @@
-/* style.css - Custom styles beyond Tailwind */
+/* style.css - Mobile-First Responsive Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -12,13 +12,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: #334155;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
@@ -26,38 +28,55 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
 .font-poppins { font-family: 'Poppins', sans-serif; }
 .font-inter { font-family: 'Inter', sans-serif; }
 
+/* ============================================
+   MOBILE: Base styles (default, no breakpoint)
+   ============================================ */
+
+/* Ensure no horizontal scroll */
+html, body { overflow-x: hidden; width: 100%; }
+
+/* Prevent images from overflowing */
+img { max-width: 100%; height: auto; }
+
 /* Scroll Progress */
 #scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
   height: 3px;
+  width: 0;
   background: linear-gradient(90deg, #D97706, #F59E0B);
   z-index: 9999;
   transition: width 0.1s linear;
 }
 
-/* Back to top */
+/* Back to top - mobile size */
 #back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.25rem;
+  right: 1.25rem;
   z-index: 40;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
 }
 #back-to-top.opacity-100 {
   opacity: 1;
   visibility: visible;
 }
+#back-to-top.opacity-0 {
+  opacity: 0;
+  visibility: hidden;
+}
 
-/* Smooth transitions for gallery items */
+/* Gallery items */
 .gallery-item {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* FAQ transitions */
+/* FAQ */
 .faq-answer {
   max-height: 0;
   opacity: 0;
@@ -68,7 +87,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   transition: transform 0.3s ease;
 }
 
-/* Hero video overlay */
+/* Hero overlay */
 .hero-overlay {
   background: linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.7) 50%, rgba(15,23,42,0.85) 100%);
 }
@@ -81,20 +100,29 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Service card hover */
+/* Service card */
 .service-card {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px -15px rgba(0,0,0,0.15);
+@media (hover: hover) {
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px rgba(0,0,0,0.15);
+  }
+  .service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, #D97706, #F59E0B);
+  }
+  .service-card:hover .service-icon i {
+    color: white;
+  }
 }
-.service-card:hover .service-icon {
-  transform: scale(1.1) rotate(5deg);
-  background: linear-gradient(135deg, #D97706, #F59E0B);
-}
-.service-card:hover .service-icon i {
-  color: white;
+/* Touch devices - tap feedback instead of hover */
+@media (hover: none) {
+  .service-card:active {
+    transform: scale(0.97);
+    box-shadow: 0 8px 25px -5px rgba(0,0,0,0.1);
+  }
 }
 
 /* Project card */
@@ -102,44 +130,44 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   transition: all 0.4s ease;
   overflow: hidden;
 }
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+  }
+  .project-card:hover .project-img img {
+    transform: scale(1.1);
+  }
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
 }
-.project-card:hover .project-img img {
-  transform: scale(1.1);
-}
-.project-card:hover .project-overlay {
-  opacity: 1;
+/* On mobile, always show overlay partially so users know it's tappable */
+@media (hover: none) {
+  .project-card .project-overlay {
+    opacity: 0.7 !important;
+    background: linear-gradient(to top, rgba(15,23,42,0.8) 0%, transparent 60%) !important;
+  }
 }
 
 /* Image zoom */
-.img-zoom {
-  overflow: hidden;
-}
+.img-zoom { overflow: hidden; }
 .img-zoom img {
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.img-zoom:hover img {
-  transform: scale(1.08);
+@media (hover: hover) {
+  .img-zoom:hover img { transform: scale(1.08); }
 }
 
-/* Timeline */
+/* Timeline - mobile: single column on left */
 .timeline-line {
   position: absolute;
-  left: 50%;
+  left: 20px;
   top: 0;
   bottom: 0;
   width: 2px;
   background: linear-gradient(180deg, #D97706, #F59E0B);
-  transform: translateX(-50%);
 }
-@media (max-width: 768px) {
-  .timeline-line {
-    left: 20px;
-  }
-}
-
 .timeline-dot {
   width: 16px;
   height: 16px;
@@ -147,27 +175,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   background: #D97706;
   border: 3px solid #F59E0B;
   position: absolute;
-  left: 50%;
+  left: 20px;
   transform: translateX(-50%);
   top: 0;
   z-index: 2;
-}
-@media (max-width: 768px) {
-  .timeline-dot {
-    left: 20px;
-  }
-}
-
-/* Blog card */
-.blog-card {
-  transition: all 0.4s ease;
-}
-.blog-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px -12px rgba(0,0,0,0.12);
-}
-.blog-card:hover .blog-img img {
-  transform: scale(1.08);
 }
 
 /* CTA section */
@@ -187,14 +198,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
 }
 
 /* Lightbox */
-#lightbox {
-  transition: opacity 0.3s ease;
-}
+#lightbox { transition: opacity 0.3s ease; }
 
-/* Navbar text class for toggling */
-.navbar-text {
-  transition: color 0.3s ease;
-}
+/* Navbar text */
+.navbar-text { transition: color 0.3s ease; }
 
 /* Gradient text */
 .gradient-text {
@@ -204,18 +211,10 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   background-clip: text;
 }
 
-/* Card hover glow */
-.glow-card {
-  transition: all 0.3s ease;
-}
-.glow-card:hover {
-  box-shadow: 0 0 30px rgba(217, 119, 6, 0.15);
-}
-
-/* Skeleton animation for loading */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+/* Glow card */
+.glow-card { transition: all 0.3s ease; }
+@media (hover: hover) {
+  .glow-card:hover { box-shadow: 0 0 30px rgba(217, 119, 6, 0.15); }
 }
 
 /* Pulse animation */
@@ -223,47 +222,35 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   0%, 100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.4); }
   50% { box-shadow: 0 0 0 15px rgba(217, 119, 6, 0); }
 }
-.animate-pulse-amber {
-  animation: pulse-amber 2s infinite;
-}
+.animate-pulse-amber { animation: pulse-amber 2s infinite; }
 
 /* Float animation */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
+.animate-float { animation: float 3s ease-in-out infinite; }
 
 /* Hero scroll indicator */
 @keyframes scrollBounce {
   0%, 100% { transform: translateY(0); opacity: 1; }
   50% { transform: translateY(8px); opacity: 0.5; }
 }
-.scroll-indicator {
-  animation: scrollBounce 1.5s ease-in-out infinite;
-}
+.scroll-indicator { animation: scrollBounce 1.5s ease-in-out infinite; }
 
 /* Selection color */
-::selection {
-  background: #D97706;
-  color: white;
-}
+::selection { background: #D97706; color: white; }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Custom scrollbar - hide on mobile */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #0F172A; }
+  ::-webkit-scrollbar-thumb { background: #D97706; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
 }
-::-webkit-scrollbar-track {
-  background: #0F172A;
-}
-::-webkit-scrollbar-thumb {
-  background: #D97706;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #F59E0B;
+@media (max-width: 767px) {
+  ::-webkit-scrollbar { width: 0; display: none; }
+  html { scrollbar-width: none; }
 }
 
 /* Newsletter input */
@@ -272,11 +259,22 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
   box-shadow: 0 0 0 2px #D97706;
 }
 
-/* Mobile menu animation */
+/* ============================================
+   MOBILE MENU - Full screen overlay
+   ============================================ */
+#mobile-menu {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
 #mobile-menu .mobile-nav-link {
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #mobile-menu.translate-x-0 .mobile-nav-link {
   opacity: 1;
@@ -292,15 +290,183 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
 #mobile-menu.translate-x-0 .mobile-nav-link:nth-child(8) { transition-delay: 0.45s; }
 #mobile-menu.translate-x-0 .mobile-nav-link:nth-child(9) { transition-delay: 0.5s; }
 
-/* Parallax */
+/* ============================================
+   HAMBURGER ANIMATION
+   ============================================ */
+.hamburger-lines span {
+  display: block;
+  transform-origin: center;
+}
+#mobile-menu-btn.active .hamburger-lines span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#mobile-menu-btn.active .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#mobile-menu-btn.active .hamburger-lines span:nth-child(3) {
+  width: 20px;
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+   MOBILE: Touch-friendly tap targets (44px min)
+   ============================================ */
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button, a.nav-link, .mobile-nav-link, .faq-question, .project-filter-btn, .gallery-filter-btn, .blog-cat-btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ============================================
+   MOBILE: Hero section adjustments
+   ============================================ */
+@media (max-width: 640px) {
+  .scroll-indicator {
+    bottom: 1.5rem !important;
+  }
+}
+
+/* ============================================
+   MOBILE: Parallax disabled on small screens
+   ============================================ */
 .parallax-bg {
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .parallax-bg {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
+}
+
+/* ============================================
+   TABLET: 640px - 1023px
+   ============================================ */
+@media (min-width: 640px) {
+  #back-to-top {
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ============================================
+   TABLET: Timeline horizontal layout
+   ============================================ */
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================
+   DESKTOP: Large screens
+   ============================================ */
+@media (min-width: 1024px) {
+  #back-to-top {
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* ============================================
+   LIGHTBOX: Mobile-optimized
+   ============================================ */
+@media (max-width: 640px) {
+  #lightbox img {
+    max-width: 95vw;
+    max-height: 80vh;
+    border-radius: 0.5rem;
+  }
+  #lightbox-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+  }
+  #lightbox-prev, #lightbox-next {
+    width: 40px;
+    height: 40px;
+  }
+  #lightbox-prev { left: 0.5rem; }
+  #lightbox-next { right: 0.5rem; }
+}
+
+/* ============================================
+   FORMS: Mobile-friendly inputs
+   ============================================ */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ============================================
+   SWIPER: Mobile pagination spacing
+   ============================================ */
+@media (max-width: 640px) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+  }
+  .testimonial-swiper .swiper-pagination,
+  .brand-swiper .swiper-pagination {
+    display: block;
+  }
+}
+
+/* ============================================
+   UTILITY: Mobile spacing helpers
+   ============================================ */
+@media (max-width: 640px) {
+  .section-padding-mobile {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* ============================================
+   FORCE IMAGES TO BE RESPONSIVE
+   ============================================ */
+.project-img img,
+.gallery-item img,
+.blog-img img,
+img.rounded-3xl,
+img.object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   MOBILE: Prevent large elements from breaking layout
+   ============================================ */
+.max-w-7xl, .max-w-6xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+  max-width: 100%;
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  #navbar, #back-to-top, #scroll-progress, #mobile-menu, footer {
+    display: none !important;
+  }
+  body { background: white; color: black; }
 }

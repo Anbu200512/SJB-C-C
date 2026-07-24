@@ -1,15 +1,22 @@
-// animation.js - GSAP & AOS animations
+// animation.js - GSAP & AOS animations (mobile-optimized)
 function initAnimations() {
+  // Detect mobile for lighter animations
+  const isMobile = window.innerWidth < 768;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // Counter animation
   const counters = document.querySelectorAll('.counter');
-  const observerOptions = { threshold: 0.5 };
-
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const counter = entry.target;
         const target = parseInt(counter.getAttribute('data-target'));
         const suffix = counter.getAttribute('data-suffix') || '';
+        if (prefersReducedMotion) {
+          counter.textContent = target + suffix;
+          counterObserver.unobserve(counter);
+          return;
+        }
         let current = 0;
         const increment = target / 60;
         const timer = setInterval(() => {
@@ -24,102 +31,119 @@ function initAnimations() {
         counterObserver.unobserve(counter);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.5 });
 
   counters.forEach(counter => counterObserver.observe(counter));
 
   // Scroll progress
   const scrollProgress = document.getElementById('scroll-progress');
   if (scrollProgress) {
+    let scrollTicking = false;
     window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      scrollProgress.style.width = (window.scrollY / h * 100) + '%';
-    });
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          const h = document.documentElement.scrollHeight - window.innerHeight;
+          scrollProgress.style.width = (window.scrollY / h * 100) + '%';
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
   }
+
+  // Skip heavy GSAP animations on mobile for performance
+  if (prefersReducedMotion) return;
 
   // GSAP animations if available
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Parallax sections
-    gsap.utils.toArray('.parallax-section').forEach(section => {
-      const bg = section.querySelector('.parallax-bg');
-      if (bg) {
-        gsap.to(bg, {
-          yPercent: -20,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          },
-        });
-      }
-    });
+    // Parallax sections (desktop only)
+    if (!isMobile) {
+      gsap.utils.toArray('.parallax-section').forEach(section => {
+        const bg = section.querySelector('.parallax-bg');
+        if (bg) {
+          gsap.to(bg, {
+            yPercent: -20,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          });
+        }
+      });
+    }
+
+    // Reduce animation distances on mobile
+    const fadeY = isMobile ? 20 : 40;
+    const slideX = isMobile ? 30 : 60;
 
     // Fade in animations
     gsap.utils.toArray('.gsap-fade-up').forEach(el => {
       gsap.from(el, {
-        y: 40,
+        y: fadeY,
         opacity: 0,
-        duration: 0.8,
+        duration: isMobile ? 0.6 : 0.8,
         ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
       });
     });
 
     gsap.utils.toArray('.gsap-fade-left').forEach(el => {
       gsap.from(el, {
-        x: -60,
+        x: -slideX,
         opacity: 0,
-        duration: 0.8,
+        duration: isMobile ? 0.6 : 0.8,
         ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
       });
     });
 
     gsap.utils.toArray('.gsap-fade-right').forEach(el => {
       gsap.from(el, {
-        x: 60,
+        x: slideX,
         opacity: 0,
-        duration: 0.8,
+        duration: isMobile ? 0.6 : 0.8,
         ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
       });
     });
 
     gsap.utils.toArray('.gsap-scale').forEach(el => {
       gsap.from(el, {
-        scale: 0.8,
+        scale: isMobile ? 0.95 : 0.8,
         opacity: 0,
-        duration: 0.8,
+        duration: isMobile ? 0.6 : 0.8,
         ease: 'power2.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
       });
     });
 
-    // Stagger children
+    // Stagger children (simpler on mobile)
     gsap.utils.toArray('.gsap-stagger').forEach(container => {
       const children = container.children;
       gsap.from(children, {
-        y: 30,
+        y: isMobile ? 15 : 30,
         opacity: 0,
-        duration: 0.6,
-        stagger: 0.15,
+        duration: isMobile ? 0.4 : 0.6,
+        stagger: isMobile ? 0.08 : 0.15,
         ease: 'power2.out',
-        scrollTrigger: { trigger: container, start: 'top 80%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: container, start: 'top 85%', toggleActions: 'play none none none' },
       });
     });
 
     // Timeline animation
     gsap.utils.toArray('.timeline-item').forEach((item, i) => {
       gsap.from(item, {
-        x: i % 2 === 0 ? -50 : 50,
+        x: isMobile ? 0 : (i % 2 === 0 ? -50 : 50),
+        y: isMobile ? 20 : 0,
         opacity: 0,
-        duration: 0.8,
+        duration: isMobile ? 0.5 : 0.8,
         ease: 'power2.out',
-        scrollTrigger: { trigger: item, start: 'top 85%', toggleActions: 'play none none none' },
+        scrollTrigger: { trigger: item, start: 'top 88%', toggleActions: 'play none none none' },
       });
     });
   }
@@ -132,24 +156,28 @@ function initAnimations() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const navHeight = document.getElementById('navbar')?.offsetHeight || 0;
+        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     });
   });
 
-  // Button ripple effect
-  document.querySelectorAll('.btn-ripple').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const ripple = document.createElement('span');
-      const rect = this.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      ripple.style.cssText = `position:absolute;width:${size}px;height:${size}px;border-radius:50%;background:rgba(255,255,255,0.3);transform:scale(0);animation:ripple 0.6s linear;pointer-events:none;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px;`;
-      this.style.position = 'relative';
-      this.style.overflow = 'hidden';
-      this.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 600);
+  // Button ripple effect (skip on mobile for performance)
+  if (!isMobile) {
+    document.querySelectorAll('.btn-ripple').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.cssText = `position:absolute;width:${size}px;height:${size}px;border-radius:50%;background:rgba(255,255,255,0.3);transform:scale(0);animation:ripple 0.6s linear;pointer-events:none;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px;`;
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
     });
-  });
+  }
 
   // Add ripple keyframe
   if (!document.getElementById('ripple-style')) {
@@ -160,7 +188,7 @@ function initAnimations() {
   }
 }
 
-// FAQ accordion
+// FAQ accordion - touch-friendly
 function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
