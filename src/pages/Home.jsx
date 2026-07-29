@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import Counter from '../components/Counter'
+import SEO from '../components/SEO'
+import partnerImg from '../assets/images/Your Local Partnerfor QualityConstructon.jpg'
 
 export default function Home() {
   return (
     <>
+      <SEO title="Home" description="SJB C&C - Tamil Nadu's trusted budget-friendly construction startup. Quality home construction, commercial buildings, and renovations in Villupuram, Chennai, and across Tamil Nadu." />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -182,7 +185,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="relative" data-aos="fade-right">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="SJB C&C construction team at work in Tamil Nadu" className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover" />
+                <img src={partnerImg} alt="Modern South Indian home built with local materials and Vastu-compliant design in Tamil Nadu" className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-8 rounded-2xl shadow-xl hidden md:block">
@@ -531,7 +534,7 @@ export default function Home() {
               <div className="swiper-slide">
                 <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300 h-full">
                   <div className="flex gap-1 mb-4"><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /></div>
-                  <p className="text-gray-600 mb-6 leading-relaxed">&quot;SJB C&C built our 2BHK home in Villupuram within 8 months. The quality is excellent and they completed it within our budget of 45 lakhs. Very professional team!&quot;</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">&quot;SJB C&C built our 2BHK home in Villupuram within 8 months. The quality is excellent and they delivered great value within our budget. Very professional team!&quot;</p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center"><span className="text-amber-600 font-bold">KR</span></div>
                     <div><h4 className="font-semibold text-primary">K. Ravi</h4><p className="text-gray-400 text-sm">Villupuram Town</p></div>

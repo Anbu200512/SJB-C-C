@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import Counter from '../components/Counter'
+import SEO from '../components/SEO'
 import ceoImg from '../assets/images/ceo.jpeg'
+import storyImg from '../assets/images/From Villupuram to Tamil Nadu\'s Trusted Builder.jpg'
 
 export default function About() {
   return (
     <>
+      <SEO title="About Us | Best Builders in Tamil Nadu" description="Learn the story of SJB C&C — a young budget-friendly construction startup from Villupuram, Tamil Nadu. 35+ projects delivered across Chennai, Pondicherry, and more." />
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -26,7 +29,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div data-aos="fade-right">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="SJB C&C construction team working on a project in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[450px] object-cover" />
+                <img src={storyImg} alt="SJB C&C construction team working on a project in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[450px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-amber-500 rounded-2xl -z-10 hidden lg:block" />
@@ -114,7 +117,7 @@ export default function About() {
       {/* Safety Commitment */}
       <section className="py-16 sm:py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80" alt="" className="w-full h-full object-cover" aria-hidden="true" />
+          <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="" className="w-full h-full object-cover" aria-hidden="true" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -198,7 +201,7 @@ export default function About() {
       {/* CTA */}
       <section className="py-16 sm:py-24 cta-section relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
+          <img src="https://images.pexels.com/photos/34629416/pexels-photo-34629416.jpeg?auto=compress&cs=tinysrgb" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Become Part of Our Story</h2>

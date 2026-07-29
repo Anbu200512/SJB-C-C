@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Terms() {
   return (
     <>
+      <SEO title="Terms of Service" description="SJB C&C terms of service — guidelines and legal terms for using our website and construction services in Tamil Nadu." />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">

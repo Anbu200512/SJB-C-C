@@ -164,10 +164,11 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="mobile-menu-footer">
-            <a href="tel:+919629528219"><i className="fas fa-phone-alt" /> +91 96295 28219</a>
-            <a href="mailto:sjbconstructionandcontracts@gmail.com"><i className="fas fa-envelope" /> sjbconstructionandcontracts@gmail.com</a>
-          </div>
+              <div className="mobile-menu-footer">
+                <a href="tel:+919629528219"><i className="fas fa-phone-alt" /> +91 96295 28219</a>
+                <a href="mailto:sjbconstructionandcontracts@gmail.com"><i className="fas fa-envelope" /> sjbconstructionandcontracts@gmail.com</a>
+                <a href="https://g.page/sjbcc/review" target="_blank"><i className="fab fa-google" /> Review us on Google</a>
+              </div>
         </div>
       </div>
     </header>

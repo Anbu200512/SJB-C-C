@@ -38,6 +38,8 @@ export default function Footer() {
               <li><Link to="/testimonials" className="text-gray-400 hover:text-amber-500 transition-colors duration-300 text-sm flex items-center gap-2 py-1 group"><i className="fas fa-chevron-right text-xs text-amber-500/50 group-hover:translate-x-1 transition-transform" /> Testimonials</Link></li>
               <li><Link to="/faq" className="text-gray-400 hover:text-amber-500 transition-colors duration-300 text-sm flex items-center gap-2 py-1 group"><i className="fas fa-chevron-right text-xs text-amber-500/50 group-hover:translate-x-1 transition-transform" /> FAQ</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-amber-500 transition-colors duration-300 text-sm flex items-center gap-2 py-1 group"><i className="fas fa-chevron-right text-xs text-amber-500/50 group-hover:translate-x-1 transition-transform" /> Careers</Link></li>
+              <li><Link to="/service-areas/villupuram" className="text-gray-400 hover:text-amber-500 transition-colors duration-300 text-sm flex items-center gap-2 py-1 group"><i className="fas fa-chevron-right text-xs text-amber-500/50 group-hover:translate-x-1 transition-transform" /> Villupuram</Link></li>
+              <li><Link to="/service-areas/chennai" className="text-gray-400 hover:text-amber-500 transition-colors duration-300 text-sm flex items-center gap-2 py-1 group"><i className="fas fa-chevron-right text-xs text-amber-500/50 group-hover:translate-x-1 transition-transform" /> Chennai</Link></li>
             </ul>
           </div>
 
@@ -74,7 +76,7 @@ export default function Footer() {
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0"><i className="fas fa-phone-alt text-amber-500 text-xs sm:text-sm" /></div>
                 <div>
                   <a href="tel:+919629528219" className="text-gray-400 hover:text-amber-500 transition-colors text-sm">+91 96295 28219</a>
-                  <p className="text-gray-500 text-xs">Mon - Sat: 8AM - 7PM</p>
+                  <p className="text-gray-500 text-xs">Mon - Sat: 9AM - 6PM</p>
                 </div>
               </li>
               <li className="flex gap-3 items-center">
@@ -86,7 +88,7 @@ export default function Footer() {
               <li className="flex gap-3 items-center">
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0"><i className="fas fa-clock text-amber-500 text-xs sm:text-sm" /></div>
                 <div>
-                  <p className="text-gray-400 text-sm">Mon - Sat: 8:00 AM - 7:00 PM</p>
+                  <p className="text-gray-400 text-sm">Mon - Sat: 9:00 AM - 6:00 PM</p>
                   <p className="text-gray-500 text-sm">Sunday: Emergency Only</p>
                 </div>
               </li>
@@ -103,7 +105,7 @@ export default function Footer() {
             <div className="flex gap-4 sm:gap-6">
               <Link to="/privacy" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Privacy</Link>
               <Link to="/terms" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Terms</Link>
-              <a href="#" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Sitemap</a>
+              <a href="https://g.page/sjbcc/review" target="_blank" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Google Review</a>
             </div>
           </div>
         </div>

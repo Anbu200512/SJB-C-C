@@ -11,6 +11,8 @@ import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Careers from './pages/Careers'
+import Villupuram from './pages/Villupuram'
+import Chennai from './pages/Chennai'
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/service-areas/villupuram" element={<Villupuram />} />
+        <Route path="/service-areas/chennai" element={<Chennai />} />
       </Routes>
     </Layout>
   )

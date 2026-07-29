@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import Counter from '../components/Counter'
+import SEO, { ReviewSchema } from '../components/SEO'
 
 export default function Testimonials() {
   return (
     <>
+      <SEO title="Client Reviews | Tamil Nadu's Trusted Builders" description="Read what our clients in Villupuram, Chennai, Pondicherry, Tindivanam, and Cuddalore say about SJB C&C budget-friendly construction. 35+ satisfied customers. 4.9 Google Rating." />
+      <ReviewSchema />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -76,7 +79,7 @@ export default function Testimonials() {
 
             <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
               <div className="flex gap-1 mb-4"><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star-half-alt text-amber-400" /></div>
-              <p className="text-gray-600 mb-6 leading-relaxed">&quot;From the initial consultation to the final handover, SJB C&C maintained the highest professional standards. Our Balaji Nagar apartment project in Villupuram was completed on time and within the ₹2.8 Cr budget. Highly recommended.&quot;</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">&quot;From the initial consultation to the final handover, SJB C&C maintained the highest professional standards. Our Balaji Nagar apartment project in Villupuram was completed on time and within our budget-friendly plan. Highly recommended.&quot;</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center"><span className="text-purple-600 font-bold text-sm">SK</span></div>
                 <div><h4 className="font-semibold text-primary text-sm">Suresh Kumar</h4><p className="text-gray-400 text-xs">Balaji Nagar Apartments, Villupuram</p></div>
@@ -103,7 +106,7 @@ export default function Testimonials() {
 
             <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
               <div className="flex gap-1 mb-4"><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /></div>
-              <p className="text-gray-600 mb-6 leading-relaxed">&quot;Building Anand Villa in Chromepet with SJB C&C was a wonderful experience. They were transparent with costs in INR, kept us updated throughout, and the final bungalow with pool exceeded our expectations completely.&quot;</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">&quot;Building Anand Villa in Chromepet with SJB C&C was a wonderful experience. They were transparent with costs, kept us updated throughout, and the final bungalow with pool exceeded our expectations completely.&quot;</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center"><span className="text-teal-600 font-bold text-sm">DK</span></div>
                 <div><h4 className="font-semibold text-primary text-sm">Deepa Krishnan</h4><p className="text-gray-400 text-xs">Anand Villa, Chromepet, Chennai</p></div>

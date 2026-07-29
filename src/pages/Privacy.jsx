@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Privacy() {
   return (
     <>
+      <SEO title="Privacy Policy" description="SJB C&C privacy policy — how we collect, use, and protect your personal information when you visit our website or use our construction services." />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">

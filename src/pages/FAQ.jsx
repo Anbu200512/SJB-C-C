@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
+import SEO, { FAQSchema } from '../components/SEO'
 
 export default function FAQ() {
   return (
     <>
+      <SEO title="FAQ | Construction Questions Answered" description="Find answers to common questions about SJB C&C budget-friendly construction services, costs, timelines, DTCP/CMDA approvals, and building process in Tamil Nadu." />
+      <FAQSchema />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -64,7 +67,7 @@ export default function FAQ() {
                 <i className="fas fa-chevron-down text-amber-500 text-sm flex-shrink-0 faq-icon transition-transform duration-300" />
               </div>
               <div className="faq-answer mt-4" style={{ maxHeight: 0, opacity: 0 }}>
-                <p className="text-gray-500 text-sm leading-relaxed">Construction costs in Tamil Nadu vary based on location, design, materials, and finishes. As a general guide: basic construction starts from ₹1,800 per sq ft, mid-range from ₹2,500 per sq ft, and premium/luxury from ₹3,500+ per sq ft. For example, a 1,500 sq ft house in Villupuram may cost ₹30–50 Lakhs, while the same in Chennai could range from ₹45–75 Lakhs. We provide detailed, transparent quotations in INR after an initial consultation and site assessment.</p>
+                <p className="text-gray-500 text-sm leading-relaxed">Construction costs in Tamil Nadu vary based on location, design, materials, and finishes. We offer budget-friendly solutions for every requirement — from basic to premium. Our team provides detailed, transparent quotations after an initial consultation and site assessment, ensuring you get the best value for your investment. Contact us for a free estimate tailored to your project.</p>
               </div>
             </div>
 

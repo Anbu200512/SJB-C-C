@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import homeConstructionImg from '../assets/images/Home Construction.jpg'
+import interiorImg from '../assets/images/Interior Design.jpg'
+import renovationImg from '../assets/images/Renovation & Remodeling.jpg'
+import architectureImg from '../assets/images/Architecture & Vastu Design.jpg'
+import civilImg from '../assets/images/Civil Contracting.jpg'
+import projectMgmtImg from '../assets/images/Project Management.jpg'
 
 export default function Services() {
   return (
     <>
+      <SEO title="Construction Services | Home, Commercial & Renovation" description="SJB C&C offers budget-friendly construction services in Tamil Nadu — home construction, commercial buildings, interior design, renovation, and project management. Get free quote." />
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -23,7 +31,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
 
           {/* 01 - Home Construction */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="order-2 lg:order-1">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">01</span>
               <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Home Construction</h2>
@@ -36,18 +44,18 @@ export default function Services() {
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80" alt="Home construction in Villupuram Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={homeConstructionImg} alt="Home construction in Villupuram Tamil Nadu" className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
 
           {/* 02 - Commercial Spaces */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Commercial building construction in Chennai" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Commercial building construction and development in Chennai" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -65,7 +73,7 @@ export default function Services() {
           </div>
 
           {/* 03 - Interior Design */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="order-2 lg:order-1">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">03</span>
               <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Interior Design</h2>
@@ -78,18 +86,18 @@ export default function Services() {
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80" alt="Interior design in Pondicherry and Chennai" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={interiorImg} alt="Interior design in Pondicherry and Chennai" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
 
           {/* 04 - Renovation */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Home renovation and remodeling in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={renovationImg} alt="Home renovation and remodeling in Tamil Nadu" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -107,7 +115,7 @@ export default function Services() {
           </div>
 
           {/* 05 - Architecture (Vastu-Compliant) */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="order-2 lg:order-1">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">05</span>
               <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Architecture &amp; Vastu Design</h2>
@@ -120,18 +128,18 @@ export default function Services() {
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Vastu compliant architecture Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={architectureImg} alt="Vastu compliant architecture Tamil Nadu" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
 
           {/* 06 - Civil Contracting */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80" alt="Civil contracting and infrastructure in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={civilImg} alt="Civil contracting and infrastructure development with concrete columns and earthwork" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -149,22 +157,22 @@ export default function Services() {
           </div>
 
           {/* 07 - Project Management */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center" data-aos="fade-up">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="order-2 lg:order-1">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">07</span>
               <h2 className="text-3xl font-poppins font-semibold text-primary mb-4">Project Management</h2>
-              <p className="text-gray-500 mb-6 leading-relaxed">We manage your project from land survey to final handover — handling DTCP/CMDA approvals, municipal permissions, contractor coordination, and material procurement. Our transparent pricing in ₹ Lakhs means no hidden surprises, and our site supervisors ensure quality at every milestone.</p>
+              <p className="text-gray-500 mb-6 leading-relaxed">We manage your project from land survey to final handover — handling DTCP/CMDA approvals, municipal permissions, contractor coordination, and material procurement. Our budget-friendly pricing means no hidden surprises, and our site supervisors ensure quality at every milestone.</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">DTCP/CMDA Plan Approval Assistance</span></li>
-                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Budget Planning &amp; Transparent Cost Tracking (₹ Lakhs)</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Budget-Friendly Planning &amp; Transparent Cost Tracking</span></li>
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Material Procurement &amp; Vendor Management</span></li>
                 <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Weekly Progress Reports &amp; Photo Updates</span></li>
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Project management for construction in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[400px] object-cover" />
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={projectMgmtImg} alt="Construction project management with detailed quality tracking and progress monitoring" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -175,11 +183,11 @@ export default function Services() {
       {/* CTA */}
       <section className="py-24 cta-section relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
+          <img src="https://images.pexels.com/photos/34629416/pexels-photo-34629416.jpeg?auto=compress&cs=tinysrgb" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Find the Right Service for You</h2>
-          <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">From Vastu-compliant homes in Villupuram to commercial complexes in Chennai and renovations in Pondicherry — we tailor every service to your unique needs and budget.</p>
+          <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">From Vastu-compliant homes in Villupuram to commercial complexes in Chennai and renovations in Pondicherry — we tailor every service to your unique needs and budget-friendly approach.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/contact" className="btn-ripple inline-flex items-center gap-3 px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 transform hover:-translate-y-1">
               <i className="fas fa-cogs text-sm" /> Explore Services

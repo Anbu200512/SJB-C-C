@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Contact() {
   return (
     <>
+      <SEO title="Contact Us | Free Construction Quote Tamil Nadu" description="Contact SJB C&C for a free budget-friendly construction quote in Villupuram, Chennai, and across Tamil Nadu. Call +91 96295 28219 or visit our office." />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -122,11 +124,11 @@ export default function Contact() {
                     <label className="block text-sm font-medium text-slate-700 mb-2">Estimated Budget</label>
                     <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
                       <option value="">Select budget range</option>
-                      <option>Under ₹10 Lakhs</option>
-                      <option>₹10 - 50 Lakhs</option>
-                      <option>₹50 Lakhs - 1 Crore</option>
-                      <option>₹1 - 5 Crores</option>
-                      <option>₹5 Crores+</option>
+                      <option>Budget Friendly</option>
+                      <option>Standard</option>
+                      <option>Premium</option>
+                      <option>Luxury</option>
+                      <option>Large Scale</option>
                       <option>To Be Discussed</option>
                     </select>
                   </div>

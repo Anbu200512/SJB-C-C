@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Gallery() {
   return (
     <>
+      <SEO title="Photo Gallery | Construction Projects Tamil Nadu" description="Visual showcase of SJB C&C budget-friendly construction projects across Tamil Nadu — residential, commercial, drone footage, and progress photos." />
       {/* Hero */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -31,40 +33,40 @@ export default function Gallery() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up">
-              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&q=80" alt="Saravana Villas exterior in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/20445164/pexels-photo-20445164.jpeg?auto=compress&cs=tinysrgb" alt="Saravana Villas exterior in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer md:row-span-2" data-category="commercial" data-aos="fade-up" data-aos-delay="50">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="Kumar Complex glass facade in Velachery, Chennai" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 min-h-[300px]" />
+              <img src="https://images.pexels.com/photos/20030658/pexels-photo-20030658.jpeg?auto=compress&cs=tinysrgb" alt="Kumar Complex modern office facade in Velachery, Chennai" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500 min-h-[300px]" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="100">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="Aerial drone view of construction site in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/5505131/pexels-photo-5505131.jpeg?auto=compress&cs=tinysrgb" alt="Aerial drone view of construction site in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="150">
-              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&q=80" alt="Construction progress at Balaji Nagar Apartments, Villupuram" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Construction progress at Balaji Nagar Apartments, Villupuram" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80" alt="Murugan Heritage Home courtyard in Pondicherry" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/34968154/pexels-photo-34968154.jpeg?auto=compress&cs=tinysrgb" alt="Rajaji Nagar modern white residential building in Hazaribagh" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="commercial" data-aos="fade-up" data-aos-delay="250">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Lakshmi Textiles Showroom interior in Tindivanam, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/33827337/pexels-photo-33827337.jpeg?auto=compress&cs=tinysrgb" alt="Lakshmi Textiles contemporary showroom in Tindivanam, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="300">
-              <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=500&q=80" alt="Drone view of Rajaji Nagar Layout in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/35854242/pexels-photo-35854242.jpeg?auto=compress&cs=tinysrgb" alt="Drone view of construction site development in Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="350">
-              <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&q=80" alt="Structural work in progress at Meenakshi Amman Residency, Chromepet" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/9172008/pexels-photo-9172008.jpeg?auto=compress&cs=tinysrgb" alt="Bricklayers working on construction site in Villupuram" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="residential" data-aos="fade-up" data-aos-delay="400">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&q=80" alt="Anand Villa bungalow in Chromepet, Chennai" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/34591376/pexels-photo-34591376.jpeg?auto=compress&cs=tinysrgb" alt="Anand Villa modern bungalow with stone columns in Chromepet, Chennai" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="commercial" data-aos="fade-up" data-aos-delay="450">
-              <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=500&q=80" alt="Chettinad Grand Hotel renovation at night in Cuddalore, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/28932304/pexels-photo-28932304.jpeg?auto=compress&cs=tinysrgb" alt="Chettinad Grand Hotel modern architecture in Cuddalore, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="drone" data-aos="fade-up" data-aos-delay="500">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80" alt="Aerial view of completed project in Tindivanam, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/15532135/pexels-photo-15532135.jpeg?auto=compress&cs=tinysrgb" alt="Aerial view of construction project at sunset in Tindivanam, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
             <div className="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="progress" data-aos="fade-up" data-aos-delay="550">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&q=80" alt="SJB C&C team reviewing construction plans in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
+              <img src="https://images.pexels.com/photos/9148610/pexels-photo-9148610.jpeg?auto=compress&cs=tinysrgb" alt="RCC concrete post construction by SJB C&C team in Villupuram, Tamil Nadu" className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500" />
             </div>
           </div>
         </div>

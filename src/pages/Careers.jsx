@@ -1,8 +1,37 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Careers() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', location: '', position: '', experience: '', skills: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [status, setStatus] = useState(null)
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSubmitting(true)
+    setStatus(null)
+    try {
+      const res = await fetch('/api/careers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed')
+      setStatus('success')
+      setForm({ name: '', email: '', phone: '', location: '', position: '', experience: '', skills: '', message: '' })
+    } catch {
+      setStatus('error')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
   return (
     <>
+      <SEO title="Careers | Join SJB C&C Construction Team" description="Join Tamil Nadu's fastest-growing budget-friendly construction startup. Explore career opportunities in Villupuram, Chennai, and across the region." />
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -56,60 +85,60 @@ export default function Careers() {
           </div>
           <div data-aos="fade-up">
             <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-slate-100 shadow-xl">
-              <form className="career-form space-y-5 sm:space-y-6">
+              <form className="career-form space-y-5 sm:space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Full Name *</label>
-                    <input type="text" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="Your full name" />
+                    <input type="text" name="name" value={form.name} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="Your full name" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
-                    <input type="email" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="your@email.com" />
+                    <input type="email" name="email" value={form.email} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="your@email.com" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Phone Number *</label>
-                    <input type="tel" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="+91 96295 28219" />
+                    <input type="tel" name="phone" value={form.phone} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="+91 96295 28219" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Current Location</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="City, District (e.g., Villupuram, Chennai)" />
+                    <input type="text" name="location" value={form.location} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="City, District (e.g., Villupuram, Chennai)" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Position Interested In *</label>
-                    <select required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
+                    <select name="position" value={form.position} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
                       <option value="">Select a position</option>
-                      <option>Civil Engineer</option>
-                      <option>Site Supervisor</option>
-                      <option>Project Manager</option>
-                      <option>Architect / Designer</option>
-                      <option>Interior Designer</option>
-                      <option>Quantity Surveyor</option>
-                      <option>Skilled Labor (Mason, Carpenter, etc.)</option>
-                      <option>Safety Officer</option>
-                      <option>Office Administrator</option>
-                      <option>Intern (Civil Engineering)</option>
-                      <option>Other</option>
+                      <option value="Civil Engineer">Civil Engineer</option>
+                      <option value="Site Supervisor">Site Supervisor</option>
+                      <option value="Project Manager">Project Manager</option>
+                      <option value="Architect / Designer">Architect / Designer</option>
+                      <option value="Interior Designer">Interior Designer</option>
+                      <option value="Quantity Surveyor">Quantity Surveyor</option>
+                      <option value="Skilled Labor (Mason, Carpenter, etc.)">Skilled Labor (Mason, Carpenter, etc.)</option>
+                      <option value="Safety Officer">Safety Officer</option>
+                      <option value="Office Administrator">Office Administrator</option>
+                      <option value="Intern (Civil Engineering)">Intern (Civil Engineering)</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Years of Experience</label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
+                    <select name="experience" value={form.experience} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
                       <option value="">Select experience</option>
-                      <option>Fresher / 0 - 1 year</option>
-                      <option>1 - 3 years</option>
-                      <option>3 - 5 years</option>
-                      <option>5 - 10 years</option>
-                      <option>10+ years</option>
+                      <option value="Fresher / 0 - 1 year">Fresher / 0 - 1 year</option>
+                      <option value="1 - 3 years">1 - 3 years</option>
+                      <option value="3 - 5 years">3 - 5 years</option>
+                      <option value="5 - 10 years">5 - 10 years</option>
+                      <option value="10+ years">10+ years</option>
                     </select>
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Key Skills</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="e.g., AutoCAD, Project Management, Masonry, Vastu Knowledge" />
+                  <input type="text" name="skills" value={form.skills} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="e.g., AutoCAD, Project Management, Masonry, Vastu Knowledge" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Why do you want to join SJB C&C? *</label>
-                  <textarea rows="4" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm resize-none" placeholder="Tell us about yourself, your experience, and why you'd like to join our team in Tamil Nadu..." />
+                  <textarea rows="4" name="message" value={form.message} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm resize-none" placeholder="Tell us about yourself, your experience, and why you'd like to join our team in Tamil Nadu..." />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Upload Resume / CV</label>
@@ -118,8 +147,10 @@ export default function Careers() {
                   </div>
                   <p className="text-gray-400 text-xs mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
                 </div>
-                <button type="submit" className="btn-ripple w-full py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 min-h-[48px] text-base">
-                  <i className="fas fa-paper-plane mr-2" /> Submit Application
+                {status === 'success' && <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm text-center">Application submitted successfully! We'll be in touch.</div>}
+                {status === 'error' && <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm text-center">Failed to submit. Please try again later.</div>}
+                <button type="submit" disabled={submitting} className="btn-ripple w-full py-4 bg-amber-500 hover:bg-amber-600 disabled:bg-amber-300 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 min-h-[48px] text-base">
+                  <i className="fas fa-paper-plane mr-2" /> {submitting ? 'Submitting...' : 'Submit Application'}
                 </button>
               </form>
             </div>

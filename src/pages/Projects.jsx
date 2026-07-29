@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function Projects() {
   return (
     <>
+      <SEO title="Our Projects | Construction Portfolio Tamil Nadu" description="Explore SJB C&C's budget-friendly completed projects across Villupuram, Chennai, Pondicherry, Tindivanam, and Cuddalore. Residential, commercial, and renovation projects." />
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -35,7 +37,7 @@ export default function Projects() {
             {/* 1. Saravana Villas */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Saravana Villas" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/20445164/pexels-photo-20445164.jpeg?auto=compress&cs=tinysrgb" alt="Saravana Villas" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Saravana Villas</h3>
@@ -46,7 +48,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 14 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 45,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹1.2 Cr</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">12 Units</span>
@@ -59,7 +61,7 @@ export default function Projects() {
             {/* 2. Kumar Complex */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Kumar Complex" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Kumar Complex" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Kumar Complex</h3>
@@ -70,7 +72,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 24 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 1,20,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹4.5 Cr</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">12 Story</span>
@@ -82,7 +84,7 @@ export default function Projects() {
             {/* 3. Murugan Heritage Home */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Murugan Heritage Home" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/34591376/pexels-photo-34591376.jpeg?auto=compress&cs=tinysrgb" alt="Murugan Heritage Home" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Murugan Heritage Home</h3>
@@ -93,7 +95,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 12 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 8,500 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹85 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Heritage Style</span>
@@ -105,7 +107,7 @@ export default function Projects() {
             {/* 4. Lakshmi Textiles */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=600&q=80" alt="Lakshmi Textiles Showroom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/30132298/pexels-photo-30132298.jpeg?auto=compress&cs=tinysrgb" alt="Lakshmi Textiles Showroom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Lakshmi Textiles Showroom</h3>
@@ -116,7 +118,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 8 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 12,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹45 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">3 Story</span>
@@ -128,7 +130,7 @@ export default function Projects() {
             {/* 5. Anand Villa */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Anand Villa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/10761011/pexels-photo-10761011.jpeg?auto=compress&cs=tinysrgb" alt="Anand Villa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Anand Villa</h3>
@@ -139,7 +141,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 10 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 3,200 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹52 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Bungalow</span>
@@ -151,7 +153,7 @@ export default function Projects() {
             {/* 6. Sree Krishna Restaurant */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Sree Krishna Restaurant" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/9172008/pexels-photo-9172008.jpeg?auto=compress&cs=tinysrgb" alt="Sree Krishna Restaurant" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Sree Krishna Restaurant</h3>
@@ -162,7 +164,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 6 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 4,800 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹28 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Restaurant</span>
@@ -174,7 +176,7 @@ export default function Projects() {
             {/* 7. Rajaji Nagar Residential Layout */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="600">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Rajaji Nagar Residential Layout" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/34968154/pexels-photo-34968154.jpeg?auto=compress&cs=tinysrgb" alt="Rajaji Nagar Residential Layout" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Rajaji Nagar Layout</h3>
@@ -185,7 +187,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 18 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 25,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹78 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">8 Villas</span>
@@ -197,7 +199,7 @@ export default function Projects() {
             {/* 8. Aruna Medicals & Pharmacy */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="700">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80" alt="Aruna Medicals & Pharmacy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/29152268/pexels-photo-29152268.jpeg?auto=compress&cs=tinysrgb" alt="Aruna Medicals & Pharmacy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Aruna Medicals &amp; Pharmacy</h3>
@@ -208,7 +210,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 5 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 2,200 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹18 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Pharmacy</span>
@@ -220,7 +222,7 @@ export default function Projects() {
             {/* 9. Velammal Heritage Home Renovation */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="800">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Velammal Heritage Home Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Velammal Heritage Home Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Velammal Heritage Home</h3>
@@ -231,7 +233,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 8 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 5,600 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹35 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Heritage</span>
@@ -243,7 +245,7 @@ export default function Projects() {
             {/* 10. Balaji Nagar Apartments */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Balaji Nagar Apartments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/9148610/pexels-photo-9148610.jpeg?auto=compress&cs=tinysrgb" alt="Balaji Nagar Apartments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Balaji Nagar Apartments</h3>
@@ -254,7 +256,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 16 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 68,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹2.8 Cr</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">32 Units</span>
@@ -266,7 +268,7 @@ export default function Projects() {
             {/* 11. Chettinad Grand Hotel Renovation */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Chettinad Grand Hotel Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/34629416/pexels-photo-34629416.jpeg?auto=compress&cs=tinysrgb" alt="Chettinad Grand Hotel Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Chettinad Grand Hotel</h3>
@@ -277,7 +279,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 10 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 18,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹65 L</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Hotel</span>
@@ -289,7 +291,7 @@ export default function Projects() {
             {/* 12. Meenakshi Amman Residency */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Meenakshi Amman Residency" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.pexels.com/photos/36532625/pexels-photo-36532625.jpeg?auto=compress&cs=tinysrgb" alt="Meenakshi Amman Residency" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Meenakshi Amman Residency</h3>
@@ -300,7 +302,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 20 Months</span>
                   <span><i className="fas fa-ruler-combined mr-1" /> 82,000 sq ft</span>
-                  <span className="text-amber-500 font-semibold">₹5.5 Cr</span>
+                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">40 Units</span>
@@ -316,7 +318,7 @@ export default function Projects() {
       {/* CTA */}
       <section className="py-16 sm:py-24 cta-section relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
+          <img src="https://images.pexels.com/photos/34629416/pexels-photo-34629416.jpeg?auto=compress&cs=tinysrgb" alt="" className="w-full h-full object-cover opacity-20" aria-hidden="true" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Let's Build Something Great Together</h2>
