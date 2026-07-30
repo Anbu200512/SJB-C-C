@@ -35,6 +35,10 @@ export default function Projects() {
       {/* Filter & Projects */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary mb-4">Our Completed Portfolio</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Residential, commercial, and renovation projects delivered across Tamil Nadu.</p>
+          </div>
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-3 mb-16" data-aos="fade-up">
             <button className="project-filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-amber-500 text-white border border-amber-500 transition-all duration-300" data-filter="all">All Projects</button>
@@ -46,13 +50,13 @@ export default function Projects() {
           {/* Project Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* 1. Saravana Villas */}
+            {/* 1. Murugan Complex */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p3} alt="Saravana Villas" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p3} alt="Murugan Complex" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Saravana Villas</h3>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Murugan Complex</h3>
                   <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Villupuram, Tamil Nadu</p>
                 </div>
               </div>
@@ -70,13 +74,13 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 2. Kumar Complex */}
+            {/* 2. Park Caffey */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p7} alt="Kumar Complex" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p7} alt="Park Caffey" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Kumar Complex</h3>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Park Caffey</h3>
                   <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Velachery, Chennai</p>
                 </div>
               </div>
@@ -93,14 +97,14 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 3. Murugan Heritage Home */}
+            {/* 3. Saravana Home */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p1} alt="Murugan Heritage Home" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p1} alt="Saravana Home" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Murugan Heritage Home</h3>
-                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Pondicherry</p>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Saravana Home</h3>
+                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Kandachipuram, Villupuram</p>
                 </div>
               </div>
               <div className="p-6">
@@ -119,7 +123,7 @@ export default function Projects() {
             {/* 4. Lakshmi Textiles */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p9} alt="Lakshmi Textiles Showroom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p9} alt="Lakshmi Textiles Showroom" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Lakshmi Textiles Showroom</h3>
@@ -142,7 +146,7 @@ export default function Projects() {
             {/* 5. Anand Villa */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p5} alt="Anand Villa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p5} alt="Anand Villa" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Anand Villa</h3>
@@ -162,14 +166,14 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 6. Sree Krishna Restaurant */}
+            {/* 6. Perumal Illam */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p11} alt="Sree Krishna Restaurant" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p11} alt="Perumal Illam" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Sree Krishna Restaurant</h3>
-                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Cuddalore, Tamil Nadu</p>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Perumal Illam</h3>
+                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Chennai, Tamil Nadu</p>
                 </div>
               </div>
               <div className="p-6">
@@ -185,14 +189,14 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 7. Rajaji Nagar Residential Layout */}
+            {/* 7. Kumar Complex */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="600">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p2} alt="Rajaji Nagar Residential Layout" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p2} alt="Kumar Complex" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Rajaji Nagar Layout</h3>
-                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Villupuram, Tamil Nadu</p>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Kumar Complex</h3>
+                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Villupuram Bus Stand Road</p>
                 </div>
               </div>
               <div className="p-6">
@@ -208,13 +212,13 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 8. Aruna Medicals & Pharmacy */}
+            {/* 8. Godhai Illam */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="700">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p8} alt="Aruna Medicals & Pharmacy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p8} alt="Godhai Illam" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Aruna Medicals &amp; Pharmacy</h3>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Godhai Illam</h3>
                   <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Tindivanam, Tamil Nadu</p>
                 </div>
               </div>
@@ -231,13 +235,13 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 9. Velammal Heritage Home Renovation */}
+            {/* 9. Lakshmi Illam */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="800">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p4} alt="Velammal Heritage Home Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p4} alt="Lakshmi Illam" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Velammal Heritage Home</h3>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Lakshmi Illam</h3>
                   <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Pondicherry</p>
                 </div>
               </div>
@@ -257,7 +261,7 @@ export default function Projects() {
             {/* 10. Balaji Nagar Apartments */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p12} alt="Balaji Nagar Apartments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p12} alt="Balaji Nagar Apartments" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Balaji Nagar Apartments</h3>
@@ -277,14 +281,14 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* 11. Chettinad Grand Hotel Renovation */}
+            {/* 11. Jaya Medicals and Arul Stores */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p6} alt="Chettinad Grand Hotel Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p6} alt="Jaya Medicals and Arul Stores" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
-                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Chettinad Grand Hotel</h3>
-                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Cuddalore, Tamil Nadu</p>
+                  <h3 className="text-white text-xl font-poppins font-bold mt-1">Jaya Medicals and Arul Stores</h3>
+                  <p className="text-gray-300 text-sm mt-1"><i className="fas fa-map-marker-alt mr-1" /> Villupuram, Tamil Nadu</p>
                 </div>
               </div>
               <div className="p-6">
@@ -303,7 +307,7 @@ export default function Projects() {
             {/* 12. Meenakshi Amman Residency */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src={p10} alt="Meenakshi Amman Residency" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p10} alt="Meenakshi Amman Residency" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Meenakshi Amman Residency</h3>

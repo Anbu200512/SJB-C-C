@@ -24,6 +24,10 @@ export default function Testimonials() {
 
       {/* Stats Bar */}
       <section className="py-12 bg-white border-b border-slate-100">
+        <div className="text-center mb-8" data-aos="fade-up">
+          <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary">Our Track Record</h2>
+          <p className="text-gray-500 mt-2">35+ satisfied clients trust SJB C&C — your local builder near me.</p>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div data-aos="fade-up">
@@ -49,6 +53,10 @@ export default function Testimonials() {
       {/* Testimonials Grid */}
       <section className="py-16 sm:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary mb-4">Client Testimonials</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Hear from homeowners and businesses across Tamil Nadu who chose SJB C&C as their local contractor.</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="p-8 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300" data-aos="fade-up">
               <div className="flex gap-1 mb-4"><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /><i className="fas fa-star text-amber-400" /></div>

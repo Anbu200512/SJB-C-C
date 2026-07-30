@@ -63,12 +63,13 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-0.5">
+          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
             {navLinks.map(link => (
               <Link
                 key={link.to}
                 to={link.to}
                 className={`nav-link ${location.pathname === link.to ? 'is-active' : ''}`}
+                aria-current={location.pathname === link.to ? 'page' : undefined}
               >
                 <span className="nav-link-text">{link.label}</span>
                 <span className="nav-link-bar" />
@@ -131,12 +132,13 @@ export default function Navbar() {
 
           <div className="mobile-menu-divider" />
 
-          <nav className="mobile-menu-nav">
+          <nav className="mobile-menu-nav" aria-label="Mobile navigation">
             {navLinks.map(link => (
               <Link
                 key={link.to}
                 to={link.to}
                 className="mobile-link"
+                aria-current={location.pathname === link.to ? 'page' : undefined}
                 style={location.pathname === link.to ? { color: '#F59E0B', background: 'rgba(245,158,11,0.08)', borderColor: 'rgba(245,158,11,0.12)' } : {}}
               >
                 <span>{link.label}</span>

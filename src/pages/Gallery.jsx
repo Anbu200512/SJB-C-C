@@ -81,6 +81,10 @@ export default function Gallery() {
       {/* Gallery Grid */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary mb-4">Our Project Gallery</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Visual journey through our construction projects across Tamil Nadu.</p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {images.map((img, i) => (
               <div
@@ -91,7 +95,7 @@ export default function Gallery() {
                 data-aos-delay={i * 50}
                 onClick={() => openLightbox(i)}
               >
-                <img src={img.src} alt={img.alt} className={`w-full ${img.span ? 'h-full min-h-[300px]' : 'h-64'} object-cover hover:scale-110 transition-transform duration-500`} />
+                <img src={img.src} alt={img.alt} className={`w-full ${img.span ? 'h-full min-h-[300px]' : 'h-64'} object-cover hover:scale-110 transition-transform duration-500`} loading="lazy" />
               </div>
             ))}
           </div>
@@ -119,7 +123,7 @@ export default function Gallery() {
           <img
             src={images[lightbox.index].src}
             alt={images[lightbox.index].alt}
-            className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
+            loading="lazy" className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg"
             onClick={(e) => e.stopPropagation()}
           />
         </div>

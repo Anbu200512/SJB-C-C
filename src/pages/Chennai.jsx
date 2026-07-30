@@ -23,7 +23,7 @@ export default function Chennai() {
           <div data-aos="fade-up">
             <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Service Area</span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Building in<br /><span className="text-amber-500">Chennai</span></h1>
-            <p className="text-gray-400 text-lg max-w-xl">Reliable construction services in Chennai — from Velachery to Tharamani. We build homes, offices, and commercial spaces with CMDA approval and modern quality standards.</p>
+            <p className="text-gray-400 text-lg max-w-xl">Reliable construction services near me in Chennai — from Velachery to Tharamani. We build homes, offices, and commercial spaces with CMDA approval and modern quality standards. Best local contractor in Chennai.</p>
           </div>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function Chennai() {
             </div>
             <div className="relative" data-aos="fade-left">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Chennai_Skyline_Anna_Salai.jpg" alt="Construction projects in Chennai" className="w-full h-[300px] object-cover" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Chennai_Skyline_Anna_Salai.jpg" alt="Construction projects in Chennai" loading="lazy" className="w-full h-[300px] object-cover" />
               </div>
             </div>
           </div>
@@ -58,9 +58,12 @@ export default function Chennai() {
               { icon: 'fa-home', title: 'Home Construction', desc: 'Modern homes and apartments built to Chennai\'s coastal climate standards with CMDA approval.' },
               { icon: 'fa-building', title: 'Commercial Projects', desc: 'Showrooms, offices, and retail spaces in Chennai\'s prime commercial corridors.' },
               { icon: 'fa-paint-roller', title: 'Interior Design', desc: 'Premium interior design and fit-outs for homes and offices across Chennai.' },
+              { icon: 'fa-wrench', title: 'Plumbing & Electrical', desc: 'Professional plumbing and electrical contracting services in Chennai.' },
+              { icon: 'fa-paint-brush', title: 'Painting Services', desc: 'Interior and exterior painting with weatherproof coatings for Chennai\'s coastal climate.' },
               { icon: 'fa-hard-hat', title: 'Renovation', desc: 'Full-scale renovation and remodeling services for Chennai properties.' },
               { icon: 'fa-drafting-compass', title: 'Architecture', desc: 'Vastu-compliant and modern architectural designs tailored for Chennai.' },
               { icon: 'fa-clipboard-check', title: 'Project Management', desc: 'Complete construction management from concept to handover in Chennai.' },
+              { icon: 'fa-palette', title: 'Exterior Design', desc: 'Facade design, landscaping, and outdoor spaces for Chennai properties.' },
             ].map((s, i) => (
               <div key={i} className="p-6 rounded-2xl bg-white border border-slate-100 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay={i * 50}>
                 <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4"><i className={`fas ${s.icon} text-amber-600 text-lg`} /></div>

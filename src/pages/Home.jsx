@@ -39,7 +39,7 @@ export default function Home() {
   }, [])
   return (
     <>
-      <SEO title="Home" description="SJB C&C - Tamil Nadu's trusted budget-friendly construction startup. Quality home construction, commercial buildings, and renovations in Villupuram, Chennai, and across Tamil Nadu." />
+      <SEO title="Home" description="SJB C&C - Tamil Nadu's trusted local construction company near me. Quality home construction, commercial buildings, plumbing, electrical, painting, and renovations in Villupuram, Chennai, and across Tamil Nadu. Best builder near you." />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -62,7 +62,7 @@ export default function Home() {
           </h1>
 
           <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-            Your trusted local construction partner in Villupuram, Chennai &amp; surrounding districts. We deliver quality homes, commercial spaces, and renovations with modern craftsmanship.
+            Your trusted local construction partner near me in Villupuram, Chennai &amp; surrounding districts. We deliver quality homes, commercial spaces, plumbing, electrical, painting, and renovations with modern craftsmanship.
           </p>
 
           <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -186,8 +186,8 @@ export default function Home() {
               <div className="service-icon w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 transition-all duration-300">
                 <i className="fas fa-building text-amber-500 text-xl" />
               </div>
-              <h3 className="text-lg font-poppins font-semibold text-primary mb-3">House Renovation</h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-4">Complete home makeovers including kitchen, bathroom, flooring, and exterior upgrades at affordable rates.</p>
+              <h3 className="text-lg font-poppins font-semibold text-primary mb-3">Plumbing &amp; Electrical</h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">Expert plumbing and electrical contracting for homes and businesses — ISI-standard installations at affordable rates.</p>
               <Link to="/services" className="inline-flex items-center gap-2 text-amber-500 text-sm font-semibold group-hover:gap-3 transition-all duration-300">Learn More <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
 
@@ -195,12 +195,30 @@ export default function Home() {
               <div className="service-icon w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 transition-all duration-300">
                 <i className="fas fa-road text-amber-500 text-xl" />
               </div>
+              <h3 className="text-lg font-poppins font-semibold text-primary mb-3">Painting Services</h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">Professional interior and exterior painting with premium weatherproof coatings — Asian Paints &amp; Berger.</p>
+              <Link to="/services" className="inline-flex items-center gap-2 text-amber-500 text-sm font-semibold group-hover:gap-3 transition-all duration-300">Learn More <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+
+            <div className="service-card group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-amber-200 cursor-pointer" data-aos="fade-up" data-aos-delay="700">
+              <div className="service-icon w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 transition-all duration-300">
+                <i className="fas fa-tasks text-amber-500 text-xl" />
+              </div>
+              <h3 className="text-lg font-poppins font-semibold text-primary mb-3">Exterior Design</h3>
+              <p className="text-gray-500 text-sm leading-relaxed mb-4">Facade design, landscaping, compound walls, and outdoor spaces that enhance your property's beauty.</p>
+              <Link to="/services" className="inline-flex items-center gap-2 text-amber-500 text-sm font-semibold group-hover:gap-3 transition-all duration-300">Learn More <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+
+            <div className="service-card group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-amber-200 cursor-pointer" data-aos="fade-up" data-aos-delay="800">
+              <div className="service-icon w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 transition-all duration-300">
+                <i className="fas fa-building text-amber-500 text-xl" />
+              </div>
               <h3 className="text-lg font-poppins font-semibold text-primary mb-3">Civil Contracting</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-4">Roads, compound walls, boundary structures, and public works built to government standards.</p>
               <Link to="/services" className="inline-flex items-center gap-2 text-amber-500 text-sm font-semibold group-hover:gap-3 transition-all duration-300">Learn More <i className="fas fa-arrow-right text-xs" /></Link>
             </div>
 
-            <div className="service-card group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-amber-200 cursor-pointer" data-aos="fade-up" data-aos-delay="700">
+            <div className="service-card group p-8 rounded-2xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-amber-200 cursor-pointer" data-aos="fade-up" data-aos-delay="900">
               <div className="service-icon w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center mb-6 transition-all duration-300">
                 <i className="fas fa-tasks text-amber-500 text-xl" />
               </div>
@@ -218,7 +236,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="relative" data-aos="fade-right">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src={partnerImg} alt="Modern South Indian home built with local materials and Vastu-compliant design in Tamil Nadu" className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover" />
+                <img src={partnerImg} alt="Modern South Indian home built with local materials and Vastu-compliant design in Tamil Nadu" loading="lazy" className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-8 rounded-2xl shadow-xl hidden md:block">
@@ -229,7 +247,7 @@ export default function Home() {
 
             <div data-aos="fade-left">
               <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">Why Choose Us</span>
-              <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary mb-6">Your Local Partner<br />for Quality Construction</h2>
+              <h2 className="text-3xl sm:text-4xl font-poppins font-bold text-primary mb-6">Your Local Builder<br />for Quality Construction</h2>
               <p className="text-gray-500 mb-8 leading-relaxed">As a startup rooted in Tamil Nadu, we understand the local climate, building materials, Vastu traditions, and the unique needs of families in Villupuram, Chennai, and surrounding areas. We combine modern techniques with local expertise.</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -408,7 +426,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p1} alt="Modern 3BHK independent house in Villupuram" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p1} alt="Modern 3BHK independent house in Villupuram" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -426,14 +444,14 @@ export default function Home() {
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p2} alt="Commercial complex near Villupuram bus stand" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p2} alt="Commercial complex near Villupuram bus stand" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
                 <div className="absolute top-4 left-4 px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">Commercial</div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Kumar Shopping Complex</h3>
+                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Kumar Complex</h3>
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Villupuram Bus Stand Road</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 10 Months</span>
@@ -444,14 +462,14 @@ export default function Home() {
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p3} alt="Traditional South Indian home in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p3} alt="Traditional South Indian home in Chennai" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
                 <div className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-white text-xs font-semibold rounded-full">Residential</div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Murugan Heritage Home</h3>
+                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Murugan Complex</h3>
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Chromepet, Chennai</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 12 Months</span>
@@ -462,15 +480,15 @@ export default function Home() {
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p4} alt="Office renovation in Tindivanam" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p4} alt="Office renovation in Tindivanam" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
                 <div className="absolute top-4 left-4 px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">Renovation</div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Lakshmi Textiles Renovation</h3>
-                <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Tindivanam</p>
+                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Lakshmi Illam Renovation</h3>
+                <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Sathiyakandanur, Villupuram</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 3 Months</span>
                   <span className="text-amber-500 font-semibold">2,500 sq.ft</span>
@@ -480,7 +498,7 @@ export default function Home() {
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p5} alt="Modern house in Pondicherry" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p5} alt="Modern house in Pondicherry" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -498,14 +516,14 @@ export default function Home() {
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src={p6} alt="Restaurant interior design in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p6} alt="Restaurant interior design in Chennai" loading="lazy" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
                 <div className="absolute top-4 left-4 px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">Commercial</div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Sree Krishna Restaurant</h3>
+                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Sree Krishna Bakery</h3>
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Velachery, Chennai</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 5 Months</span>
@@ -531,7 +549,7 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div data-aos="zoom-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Your Dream Home Starts Here</h2>
-            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Get a free site visit and detailed estimate for your dream home in Villupuram, Chennai, or anywhere in Tamil Nadu. Let's turn your vision into reality.</p>
+            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Get a free site visit and detailed estimate for your dream home in Villupuram, Chennai, or anywhere in Tamil Nadu. Looking for a local contractor near me? Let's turn your vision into reality.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact" className="btn-ripple inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/30 transform hover:-translate-y-1">
                 <i className="fas fa-home text-sm" />

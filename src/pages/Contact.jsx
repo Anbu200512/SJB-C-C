@@ -42,7 +42,7 @@ export default function Contact() {
           <div data-aos="fade-up">
             <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Contact Us</span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Let's Build<br /><span className="text-amber-500">Together</span></h1>
-            <p className="text-gray-400 text-base sm:text-lg max-w-xl">Ready to start your project in Tamil Nadu? Get in touch for a free consultation and quote.</p>
+            <p className="text-gray-400 text-base sm:text-lg max-w-xl">Ready to start your project in Tamil Nadu? Get in touch for a free consultation and quote. Looking for a local contractor near me? We're here to help.</p>
           </div>
         </div>
       </section>
@@ -139,6 +139,10 @@ export default function Contact() {
                         <option value="Architecture &amp; Vastu Design">Architecture &amp; Vastu Design</option>
                         <option value="Civil Contracting">Civil Contracting</option>
                         <option value="Project Management">Project Management</option>
+                        <option value="Plumbing Services">Plumbing Services</option>
+                        <option value="Electrical Works">Electrical Works</option>
+                        <option value="Painting Services">Painting Services</option>
+                        <option value="Exterior Design">Exterior Design</option>
                       </select>
                     </div>
                   </div>

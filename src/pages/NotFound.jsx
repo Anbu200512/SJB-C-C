@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center relative overflow-hidden">
+    <>
+      <SEO title="Page Not Found | SJB C&C" description="The page you're looking for doesn't exist or has been moved. Visit SJB C&C for construction services in Villupuram, Chennai, and across Tamil Nadu." />
+      <div className="min-h-screen bg-slate-900 flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-500 rounded-full blur-3xl" />
@@ -23,6 +26,7 @@ export default function NotFound() {
           Back to Home
         </Link>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

@@ -27,7 +27,7 @@ export default function Terms() {
 
             <div>
               <h2 className="text-xl font-poppins font-bold text-primary mb-3">1. Acceptance of Terms</h2>
-              <p className="text-gray-600 leading-relaxed">By accessing and using the SJB C&C website (sjbcc.in), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
+              <p className="text-gray-600 leading-relaxed">By accessing and using the SJB C&C website (sjb-c-c.vercel.app), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
             </div>
 
             <div>

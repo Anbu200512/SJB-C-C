@@ -6,11 +6,13 @@ import renovationImg from '../assets/images/Renovation & Remodeling.jpg'
 import architectureImg from '../assets/images/Architecture & Vastu Design.jpg'
 import civilImg from '../assets/images/Civil Contracting.jpg'
 import projectMgmtImg from '../assets/images/Project Management.jpg'
+import plumbingImg from '../assets/images/p13.jpg'
+import p9 from '../assets/images/p9.jpg'
 
 export default function Services() {
   return (
     <>
-      <SEO title="Construction Services | Home, Commercial & Renovation" description="SJB C&C offers budget-friendly construction services in Tamil Nadu — home construction, commercial buildings, interior design, renovation, and project management. Get free quote." />
+      <SEO title="Construction Services | Home, Commercial & Renovation" description="SJB C&C offers budget-friendly construction services near you in Tamil Nadu — home construction, plumbing, electrical, painting, interior design, and more. Local builder in Chennai, Villupuram. Get free quote." />
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
@@ -21,7 +23,7 @@ export default function Services() {
           <div data-aos="fade-up">
             <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Serving Tamil Nadu Since Inception</span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Our Construction<br /><span className="text-amber-500">Services</span></h1>
-            <p className="text-gray-400 text-lg max-w-xl">From blueprint to handover, we deliver end-to-end construction solutions across Chennai, Villupuram, Tindivanam, Cuddalore &amp; Pondicherry — built for Tamil Nadu's climate and crafted with Vastu precision.</p>
+            <p className="text-gray-400 text-lg max-w-xl">From blueprint to handover, we deliver end-to-end construction solutions across Chennai, Villupuram, Tindivanam, Cuddalore &amp; Pondicherry — built for Tamil Nadu's climate and crafted with Vastu precision. Your trusted local contractor near me.</p>
           </div>
         </div>
       </section>
@@ -46,7 +48,7 @@ export default function Services() {
             </div>
             <div className="order-1 lg:order-2 relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={homeConstructionImg} alt="Home construction in Villupuram Tamil Nadu" className="w-full h-full object-cover object-top" />
+                <img src={homeConstructionImg} alt="Home construction in Villupuram Tamil Nadu" loading="lazy" className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
@@ -55,7 +57,7 @@ export default function Services() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Commercial building construction and development in Chennai" className="w-full h-full object-cover" />
+                <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Commercial building construction and development in Chennai" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -88,7 +90,7 @@ export default function Services() {
             </div>
             <div className="order-1 lg:order-2 relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={interiorImg} alt="Interior design in Pondicherry and Chennai" className="w-full h-full object-cover" />
+                <img src={interiorImg} alt="Interior design in Pondicherry and Chennai" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -97,7 +99,7 @@ export default function Services() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={renovationImg} alt="Home renovation and remodeling in Tamil Nadu" className="w-full h-full object-cover" />
+                <img src={renovationImg} alt="Home renovation and remodeling in Tamil Nadu" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -130,7 +132,7 @@ export default function Services() {
             </div>
             <div className="order-1 lg:order-2 relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={architectureImg} alt="Vastu compliant architecture Tamil Nadu" className="w-full h-full object-cover" />
+                <img src={architectureImg} alt="Vastu compliant architecture Tamil Nadu" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -139,7 +141,7 @@ export default function Services() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
             <div className="relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={civilImg} alt="Civil contracting and infrastructure development with concrete columns and earthwork" className="w-full h-full object-cover" />
+                <img src={civilImg} alt="Civil contracting and infrastructure development with concrete columns and earthwork" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
             <div>
@@ -172,7 +174,91 @@ export default function Services() {
             </div>
             <div className="order-1 lg:order-2 relative h-full">
               <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
-                <img src={projectMgmtImg} alt="Construction project management with detailed quality tracking and progress monitoring" className="w-full h-full object-cover" />
+                <img src={projectMgmtImg} alt="Construction project management with detailed quality tracking and progress monitoring" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* 08 - Plumbing Services */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={plumbingImg} alt="Professional plumbing services in Villupuram and Chennai" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">08</span>
+              <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Plumbing Services</h2>
+              <p className="text-gray-500 mb-6 leading-relaxed">Complete plumbing solutions for residential and commercial projects across Tamil Nadu. From water supply and drainage systems to bathroom fittings and rainwater harvesting — our licensed plumbers ensure ISI-standard installations that comply with local municipal codes and last for decades.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Water Supply &amp; Drainage Systems</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Bathroom &amp; Kitchen Plumbing Fit-Out</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Rainwater Harvesting &amp; Septic Systems</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Overhead Tank, Sump &amp; Bore Well Connections</span></li>
+              </ul>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+          </div>
+
+          {/* 09 - Electrical Works */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="order-2 lg:order-1">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">09</span>
+              <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Electrical Works</h2>
+              <p className="text-gray-500 mb-6 leading-relaxed">Full-spectrum electrical contracting services for homes, offices, and commercial buildings in Tamil Nadu. Our certified electricians design and install safe, code-compliant wiring systems with proper earthing, surge protection, and energy-efficient LED layouts — all meeting Tamil Nadu Electricity Board standards.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Complete House &amp; Office Wiring (TNEB Compliant)</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">3-Phase Power Connection &amp; Distribution Boards</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Smart Home Automation &amp; Security Systems</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Solar Panel Wiring &amp; Energy-Efficient Lighting</span></li>
+              </ul>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Professional electrical works and wiring in Tamil Nadu homes and offices" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+
+          {/* 10 - Painting Services */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src={p9} alt="Interior and exterior painting services in Chennai and Villupuram" loading="lazy" className="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">10</span>
+              <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Painting Services</h2>
+              <p className="text-gray-500 mb-6 leading-relaxed">Transform your spaces with professional painting services from SJB C&C. We use Asian Paints and Berger weatherproof coatings designed for Tamil Nadu's humid climate. Our skilled painters deliver flawless finishes for interiors, exteriors, and commercial spaces — with proper surface preparation and long-lasting results.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Interior Wall Painting &amp; Texture Finishes</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Exterior Weatherproof Coatings &amp; Waterproofing</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Wood Polish, Distemper &amp; Wallpaper Installation</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Commercial &amp; Industrial Painting Projects</span></li>
+              </ul>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+          </div>
+
+          {/* 11 - Exterior Design */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-stretch" data-aos="fade-up">
+            <div className="order-2 lg:order-1">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">11</span>
+              <h2 className="text-3xl font-poppins font-bold text-primary mb-4">Exterior Design</h2>
+              <p className="text-gray-500 mb-6 leading-relaxed">Enhance your property's curb appeal with our exterior design services. From elegant facade designs and landscaping to compound walls, gate structures, and outdoor lighting — we create stunning first impressions that blend modern aesthetics with Tamil Nadu's architectural heritage and climate considerations.</p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Building Facade &amp; Elevation Design</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Landscaping, Gardens &amp; Outdoor Spaces</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Compound Walls, Gates &amp; Parking Areas</span></li>
+                <li className="flex items-center gap-3"><div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-[10px]" /></div><span className="text-gray-600 text-sm">Outdoor Lighting, Water Features &amp; Decorative Elements</span></li>
+              </ul>
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-sm font-semibold transition-all duration-300">Get a Free Quote <i className="fas fa-arrow-right text-xs" /></Link>
+            </div>
+            <div className="order-1 lg:order-2 relative h-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Exterior design and landscaping services in Tamil Nadu" loading="lazy" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

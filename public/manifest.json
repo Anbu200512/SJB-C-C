@@ -1,0 +1,12 @@
+{
+  "name": "SJB C&C - Construction & Contracting",
+  "short_name": "SJB C&C",
+  "description": "Tamil Nadu's trusted construction company — home construction, commercial buildings, interior design, and renovations in Chennai, Villupuram.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "64x64", "type": "image/png" }
+  ]
+}

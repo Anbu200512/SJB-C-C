@@ -19,7 +19,7 @@ export default function About() {
           <div data-aos="fade-up">
             <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">About Us</span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Our Story of<br /><span className="text-amber-500">Building Tamil Nadu</span></h1>
-            <p className="text-gray-400 text-lg max-w-xl">A young, dynamic construction company rooted in Villupuram — delivering quality builds across Chennai, Pondicherry, Cuddalore and beyond since 2026.</p>
+            <p className="text-gray-400 text-lg max-w-xl">A young, dynamic construction company rooted in Villupuram — delivering quality builds across Chennai, Pondicherry, Cuddalore and beyond since 2026. Your trusted local builder near me.</p>
           </div>
         </div>
       </section>
@@ -30,7 +30,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div data-aos="fade-right">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img src={storyImg} alt="SJB C&C construction team working on a project in Tamil Nadu" className="w-full h-[280px] sm:h-[350px] lg:h-[450px] object-cover" />
+                <img src={storyImg} alt="SJB C&C construction team working on a project in Tamil Nadu" loading="lazy" className="w-full h-[280px] sm:h-[350px] lg:h-[450px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
               </div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-amber-500 rounded-2xl -z-10 hidden lg:block" />
@@ -99,7 +99,7 @@ export default function About() {
           <div className="flex justify-center" data-aos="fade-up">
             <div className="group text-center max-w-sm w-full">
               <div className="relative rounded-2xl overflow-hidden mb-6 shadow-lg">
-                <img src={ceoImg} alt="Balachandhiran - Founder & CEO of SJB C&C" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={ceoImg} alt="Balachandhiran - Founder & CEO of SJB C&C" loading="lazy" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-3">
                     <a href="https://www.linkedin.com/in/balachandhiran-saravanan-14767b357" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fab fa-linkedin-in text-xs" /></a>
@@ -174,7 +174,7 @@ export default function About() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Become Part of Our Story</h2>
-            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Whether it's your first home, a dream office, or a commercial venture — let's write the next chapter together. SJB C&C is built on trust, quality, and Tamil pride.</p>
+            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Whether it's your first home, a dream office, or a commercial venture — let's write the next chapter together. SJB C&C is built on trust, quality, and Tamil pride. Best local contractor near me in Tamil Nadu.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact" className="btn-ripple inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/30 transform hover:-translate-y-1">
                 <i className="fas fa-handshake text-sm" /> Let's Work Together
