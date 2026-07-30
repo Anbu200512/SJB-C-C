@@ -189,7 +189,7 @@ export default function Services() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6">Find the Right Service for You</h2>
           <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">From Vastu-compliant homes in Villupuram to commercial complexes in Chennai and renovations in Pondicherry — we tailor every service to your unique needs and budget-friendly approach.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/contact" className="btn-ripple inline-flex items-center gap-3 px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 transform hover:-translate-y-1">
+            <Link to="/contact" className="btn-ripple inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/30 transform hover:-translate-y-1">
               <i className="fas fa-cogs text-sm" /> Explore Services
             </Link>
             <a href="tel:+919629528219" className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 transition-all duration-300">

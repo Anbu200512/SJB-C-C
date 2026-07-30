@@ -13,11 +13,12 @@ import Terms from './pages/Terms'
 import Careers from './pages/Careers'
 import Villupuram from './pages/Villupuram'
 import Chennai from './pages/Chennai'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
@@ -31,7 +32,8 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/service-areas/villupuram" element={<Villupuram />} />
         <Route path="/service-areas/chennai" element={<Chennai />} />
-      </Routes>
-    </Layout>
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }

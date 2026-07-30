@@ -1,5 +1,17 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import p1 from '../assets/images/p1.png'
+import p2 from '../assets/images/p2.png'
+import p3 from '../assets/images/p3.png'
+import p4 from '../assets/images/p4.png'
+import p5 from '../assets/images/p5.png'
+import p6 from '../assets/images/p6.png'
+import p7 from '../assets/images/p7.jpg'
+import p8 from '../assets/images/p8.jpg'
+import p9 from '../assets/images/p9.jpg'
+import p10 from '../assets/images/p10.jpg'
+import p11 from '../assets/images/p11.jpg'
+import p12 from '../assets/images/p12.jpg'
 
 export default function Projects() {
   return (
@@ -37,7 +49,7 @@ export default function Projects() {
             {/* 1. Saravana Villas */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/20445164/pexels-photo-20445164.jpeg?auto=compress&cs=tinysrgb" alt="Saravana Villas" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p3} alt="Saravana Villas" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Saravana Villas</h3>
@@ -61,7 +73,7 @@ export default function Projects() {
             {/* 2. Kumar Complex */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Kumar Complex" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p7} alt="Kumar Complex" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Kumar Complex</h3>
@@ -84,7 +96,7 @@ export default function Projects() {
             {/* 3. Murugan Heritage Home */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/34591376/pexels-photo-34591376.jpeg?auto=compress&cs=tinysrgb" alt="Murugan Heritage Home" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p1} alt="Murugan Heritage Home" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Murugan Heritage Home</h3>
@@ -107,7 +119,7 @@ export default function Projects() {
             {/* 4. Lakshmi Textiles */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/30132298/pexels-photo-30132298.jpeg?auto=compress&cs=tinysrgb" alt="Lakshmi Textiles Showroom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p9} alt="Lakshmi Textiles Showroom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Lakshmi Textiles Showroom</h3>
@@ -130,7 +142,7 @@ export default function Projects() {
             {/* 5. Anand Villa */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/10761011/pexels-photo-10761011.jpeg?auto=compress&cs=tinysrgb" alt="Anand Villa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p5} alt="Anand Villa" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Anand Villa</h3>
@@ -153,7 +165,7 @@ export default function Projects() {
             {/* 6. Sree Krishna Restaurant */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/9172008/pexels-photo-9172008.jpeg?auto=compress&cs=tinysrgb" alt="Sree Krishna Restaurant" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p11} alt="Sree Krishna Restaurant" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Sree Krishna Restaurant</h3>
@@ -176,7 +188,7 @@ export default function Projects() {
             {/* 7. Rajaji Nagar Residential Layout */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="600">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/34968154/pexels-photo-34968154.jpeg?auto=compress&cs=tinysrgb" alt="Rajaji Nagar Residential Layout" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p2} alt="Rajaji Nagar Residential Layout" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Rajaji Nagar Layout</h3>
@@ -199,7 +211,7 @@ export default function Projects() {
             {/* 8. Aruna Medicals & Pharmacy */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="700">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/29152268/pexels-photo-29152268.jpeg?auto=compress&cs=tinysrgb" alt="Aruna Medicals & Pharmacy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p8} alt="Aruna Medicals & Pharmacy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-blue-400 text-sm font-semibold">Commercial</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Aruna Medicals &amp; Pharmacy</h3>
@@ -222,7 +234,7 @@ export default function Projects() {
             {/* 9. Velammal Heritage Home Renovation */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="800">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb" alt="Velammal Heritage Home Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p4} alt="Velammal Heritage Home Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Velammal Heritage Home</h3>
@@ -245,7 +257,7 @@ export default function Projects() {
             {/* 10. Balaji Nagar Apartments */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/9148610/pexels-photo-9148610.jpeg?auto=compress&cs=tinysrgb" alt="Balaji Nagar Apartments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p12} alt="Balaji Nagar Apartments" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Balaji Nagar Apartments</h3>
@@ -268,7 +280,7 @@ export default function Projects() {
             {/* 11. Chettinad Grand Hotel Renovation */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/34629416/pexels-photo-34629416.jpeg?auto=compress&cs=tinysrgb" alt="Chettinad Grand Hotel Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p6} alt="Chettinad Grand Hotel Renovation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-green-400 text-sm font-semibold">Renovation</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Chettinad Grand Hotel</h3>
@@ -291,7 +303,7 @@ export default function Projects() {
             {/* 12. Meenakshi Amman Residency */}
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-72 overflow-hidden">
-                <img src="https://images.pexels.com/photos/36532625/pexels-photo-36532625.jpeg?auto=compress&cs=tinysrgb" alt="Meenakshi Amman Residency" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={p10} alt="Meenakshi Amman Residency" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="project-overlay absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <span className="text-amber-400 text-sm font-semibold">Residential</span>
                   <h3 className="text-white text-xl font-poppins font-bold mt-1">Meenakshi Amman Residency</h3>

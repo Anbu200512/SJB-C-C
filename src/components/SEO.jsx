@@ -32,7 +32,7 @@ const localBusinessSchema = {
   email: site.email,
   description: 'Tamil Nadu\'s trusted budget-friendly construction startup delivering residential, commercial, and renovation projects with quality, safety, and modern innovation.',
   foundingDate: '2026',
-  founder: { '@type': 'Person', name: 'SJB' },
+  founder: { '@type': 'Person', name: 'Balachandhiran' },
   address: [
     { '@type': 'PostalAddress', streetAddress: site.addressVillupuram.street, addressLocality: site.addressVillupuram.city, addressRegion: site.addressVillupuram.state, postalCode: site.addressVillupuram.zip, addressCountry: 'IN' },
     { '@type': 'PostalAddress', streetAddress: site.addressChennai.street, addressLocality: site.addressChennai.city, addressRegion: site.addressChennai.state, addressCountry: 'IN' },

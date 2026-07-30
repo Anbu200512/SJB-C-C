@@ -1,9 +1,42 @@
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Counter from '../components/Counter'
 import SEO from '../components/SEO'
 import partnerImg from '../assets/images/Your Local Partnerfor QualityConstructon.jpg'
+import p1 from '../assets/images/p1.png'
+import p2 from '../assets/images/p2.png'
+import p3 from '../assets/images/p3.png'
+import p4 from '../assets/images/p4.png'
+import p5 from '../assets/images/p5.png'
+import p6 from '../assets/images/p6.png'
 
 export default function Home() {
+  const reviewSwiperRef = useRef(null)
+  const testimonialSwiperRef = useRef(null)
+
+  useEffect(() => {
+    let reviewSwiper, testimonialSwiper
+    if (window.Swiper && reviewSwiperRef.current) {
+      reviewSwiper = new window.Swiper(reviewSwiperRef.current, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        pagination: { el: '.google-review-pagination', clickable: true },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+      })
+    }
+    if (window.Swiper && testimonialSwiperRef.current) {
+      testimonialSwiper = new window.Swiper(testimonialSwiperRef.current, {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        pagination: { el: '.testimonial-pagination', clickable: true },
+        breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
+      })
+    }
+    return () => {
+      reviewSwiper?.destroy()
+      testimonialSwiper?.destroy()
+    }
+  }, [])
   return (
     <>
       <SEO title="Home" description="SJB C&C - Tamil Nadu's trusted budget-friendly construction startup. Quality home construction, commercial buildings, and renovations in Villupuram, Chennai, and across Tamil Nadu." />
@@ -222,7 +255,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-xs" /></div>
-                  <span className="text-slate-700 text-sm font-medium">BBMP/DTCP Approvals</span>
+                  <span className="text-slate-700 text-sm font-medium">CMDA/DTCP Approvals</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"><i className="fas fa-check text-green-600 text-xs" /></div>
@@ -276,7 +309,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="swiper google-review-swiper pb-14">
+          <div className="swiper google-review-swiper pb-14" ref={reviewSwiperRef}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 h-full">
@@ -372,35 +405,28 @@ export default function Home() {
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">Homes and spaces we have built for happy families across Tamil Nadu.</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
-            <button className="project-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-amber-500 text-white border border-amber-500 transition-all duration-300" data-filter="all">All</button>
-            <button className="project-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="residential">Residential</button>
-            <button className="project-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="commercial">Commercial</button>
-            <button className="project-filter-btn px-5 py-2 rounded-full text-sm font-medium bg-white text-slate-700 border border-slate-200 hover:border-amber-300 transition-all duration-300" data-filter="renovation">Renovation</button>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-1.jpg" alt="Modern 3BHK independent house in Villupuram" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p1} alt="Modern 3BHK independent house in Villupuram" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
                 <div className="absolute top-4 left-4 px-3 py-1 bg-amber-500 text-white text-xs font-semibold rounded-full">Residential</div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Saravana Villas - Phase 1</h3>
-                <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Villupuram Town</p>
+                <h3 className="text-lg font-poppins font-semibold text-primary mb-2">Saravan Home</h3>
+                <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Kandachipuram, Villupuram</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 8 Months</span>
-                  <span className="text-amber-500 font-semibold">45L - 65L</span>
+                  <span className="text-amber-500 font-semibold">3 BHK</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-2.jpg" alt="Commercial complex near Villupuram bus stand" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p2} alt="Commercial complex near Villupuram bus stand" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -411,14 +437,14 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Villupuram Bus Stand Road</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 10 Months</span>
-                  <span className="text-amber-500 font-semibold">85L - 1.2Cr</span>
+                  <span className="text-amber-500 font-semibold">10,000 sq.ft</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="200">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-3.jpg" alt="Traditional South Indian home in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p3} alt="Traditional South Indian home in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -429,14 +455,14 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Chromepet, Chennai</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 12 Months</span>
-                  <span className="text-amber-500 font-semibold">75L - 95L</span>
+                  <span className="text-amber-500 font-semibold">4 BHK</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="renovation" data-aos="fade-up" data-aos-delay="300">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-4.jpg" alt="Office renovation in Tindivanam" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p4} alt="Office renovation in Tindivanam" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -447,14 +473,14 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Tindivanam</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 3 Months</span>
-                  <span className="text-amber-500 font-semibold">12L - 18L</span>
+                  <span className="text-amber-500 font-semibold">2,500 sq.ft</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="residential" data-aos="fade-up" data-aos-delay="400">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-5.jpg" alt="Modern house in Pondicherry" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p5} alt="Modern house in Pondicherry" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -465,14 +491,14 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Villianur, Pondicherry</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 10 Months</span>
-                  <span className="text-amber-500 font-semibold">55L - 70L</span>
+                  <span className="text-amber-500 font-semibold">3 BHK</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group rounded-2xl overflow-hidden bg-white shadow-lg" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
               <div className="project-img relative h-64 overflow-hidden">
-                <img src="images/project-6.jpg" alt="Restaurant interior design in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
+                <img src={p6} alt="Restaurant interior design in Chennai" className="w-full h-full object-cover transition-transform duration-500" />
                 <div className="project-overlay absolute inset-0 bg-slate-900/60 opacity-0 transition-opacity duration-300 flex items-center justify-center">
                   <Link to="/projects" className="px-6 py-3 bg-amber-500 text-white rounded-full text-sm font-semibold hover:bg-amber-600 transition-colors">View Details</Link>
                 </div>
@@ -483,7 +509,7 @@ export default function Home() {
                 <p className="text-gray-500 text-sm mb-4 flex items-center gap-2"><i className="fas fa-map-marker-alt text-amber-500" /> Velachery, Chennai</p>
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span><i className="fas fa-clock mr-1" /> 5 Months</span>
-                  <span className="text-amber-500 font-semibold">35L - 50L</span>
+                  <span className="text-amber-500 font-semibold">3,500 sq.ft</span>
                 </div>
               </div>
             </div>
@@ -529,7 +555,7 @@ export default function Home() {
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">Hear from families and businesses who trusted us with their construction projects.</p>
           </div>
 
-          <div className="swiper testimonial-swiper pb-16">
+          <div className="swiper testimonial-swiper pb-16" ref={testimonialSwiperRef}>
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300 h-full">

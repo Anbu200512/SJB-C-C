@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 
@@ -6,6 +6,7 @@ export default function Careers() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', location: '', position: '', experience: '', skills: '', message: '' })
   const [submitting, setSubmitting] = useState(false)
   const [status, setStatus] = useState(null)
+  const fileInputRef = useRef(null)
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -14,14 +15,26 @@ export default function Careers() {
     setSubmitting(true)
     setStatus(null)
     try {
+      const payload = { ...form }
+      const file = fileInputRef.current?.files?.[0]
+      if (file) {
+        payload.resumeName = file.name
+        payload.resumeData = await new Promise((resolve, reject) => {
+          const reader = new FileReader()
+          reader.onload = () => resolve(reader.result.split(',')[1])
+          reader.onerror = reject
+          reader.readAsDataURL(file)
+        })
+      }
       const res = await fetch('/api/careers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       })
       if (!res.ok) throw new Error('Failed')
       setStatus('success')
       setForm({ name: '', email: '', phone: '', location: '', position: '', experience: '', skills: '', message: '' })
+      if (fileInputRef.current) fileInputRef.current.value = ''
     } catch {
       setStatus('error')
     } finally {
@@ -143,7 +156,7 @@ export default function Careers() {
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">Upload Resume / CV</label>
                   <div className="relative">
-                    <input type="file" accept=".pdf,.doc,.docx" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-600 hover:file:bg-amber-100 cursor-pointer" />
+                    <input type="file" ref={fileInputRef} accept=".pdf,.doc,.docx" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-600 hover:file:bg-amber-100 cursor-pointer" />
                   </div>
                   <p className="text-gray-400 text-xs mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
                 </div>

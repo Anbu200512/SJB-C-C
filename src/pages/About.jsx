@@ -4,6 +4,7 @@ import SEO from '../components/SEO'
 import ceoImg from '../assets/images/ceo.jpeg'
 import storyImg from '../assets/images/From Villupuram to Tamil Nadu\'s Trusted Builder.jpg'
 
+
 export default function About() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function About() {
       {/* Hero Banner */}
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1504919935241-ea3e9cb3f91c?w=1920&q=80" alt="SJB C&C construction team at work in Tamil Nadu" className="w-full h-full object-cover opacity-30" />
+          <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80" alt="SJB C&C construction team at work in Tamil Nadu" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/60" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +42,7 @@ export default function About() {
               <p className="text-gray-500 mb-6 leading-relaxed">In a short time, we have successfully delivered projects spanning residential, commercial, and institutional sectors across Villupuram, Chennai, Tindivanam, Cuddalore, and Pondicherry. Our youthful energy, combined with a commitment to quality, safety, and client satisfaction, has earned us the trust of homeowners and businesses throughout Tamil Nadu.</p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-4 rounded-xl bg-slate-50">
-                  <span className="text-3xl font-poppins font-bold text-amber-500">25+</span>
+                  <span className="text-3xl font-poppins font-bold text-amber-500">35+</span>
                   <p className="text-gray-500 text-sm mt-1">Projects Delivered</p>
                 </div>
                 <div className="p-4 rounded-xl bg-slate-50">
@@ -98,17 +99,17 @@ export default function About() {
           <div className="flex justify-center" data-aos="fade-up">
             <div className="group text-center max-w-sm w-full">
               <div className="relative rounded-2xl overflow-hidden mb-6 shadow-lg">
-                <img src={ceoImg} alt="Balachandiran - Founder & CEO of SJB C&C" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={ceoImg} alt="Balachandhiran - Founder & CEO of SJB C&C" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-3">
-                    <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fab fa-linkedin-in text-xs" /></a>
+                    <a href="https://www.linkedin.com/in/balachandhiran-saravanan-14767b357" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fab fa-linkedin-in text-xs" /></a>
                     <a href="mailto:sjbconstructionandcontracts@gmail.com" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fas fa-envelope text-xs" /></a>
                   </div>
                 </div>
               </div>
-              <h3 className="text-lg font-poppins font-semibold text-primary">Balachandiran</h3>
+              <h3 className="text-lg font-poppins font-semibold text-primary">Balachandhiran</h3>
               <p className="text-amber-500 text-sm font-medium">Founder &amp; CEO</p>
-              <p className="text-gray-400 text-sm mt-2">Young Tamil Nadu entrepreneur &amp; civil engineer</p>
+              <p className="text-gray-400 text-sm mt-2">BE-Mechanical Engineering graduate</p>
             </div>
           </div>
         </div>
@@ -161,38 +162,6 @@ export default function About() {
                 <Counter target={12} suffix="+" className="text-4xl font-poppins font-bold text-amber-400" />
                 <p className="text-gray-400 text-sm mt-2">Safety Trainings/Year</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Awards & Certifications */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-amber-50 text-amber-600 text-sm font-semibold mb-4">Recognition</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-primary">Awards &amp; Certifications</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-amber-100 flex items-center justify-center"><i className="fas fa-award text-amber-600 text-2xl" /></div>
-              <h4 className="font-poppins font-semibold text-primary mb-2">CPWD Registered</h4>
-              <p className="text-gray-400 text-sm">Central Public Works Department, Govt. of India</p>
-            </div>
-            <div className="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-blue-100 flex items-center justify-center"><i className="fas fa-certificate text-blue-600 text-2xl" /></div>
-              <h4 className="font-poppins font-semibold text-primary mb-2">PWD Tamil Nadu</h4>
-              <p className="text-gray-400 text-sm">Public Works Department, Govt. of Tamil Nadu</p>
-            </div>
-            <div className="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-green-100 flex items-center justify-center"><i className="fas fa-leaf text-green-600 text-2xl" /></div>
-              <h4 className="font-poppins font-semibold text-primary mb-2">GRIHA Certified</h4>
-              <p className="text-gray-400 text-sm">Green Rating for Integrated Habitat Assessment</p>
-            </div>
-            <div className="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-lg transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-purple-100 flex items-center justify-center"><i className="fas fa-medal text-purple-600 text-2xl" /></div>
-              <h4 className="font-poppins font-semibold text-primary mb-2">IOA Registered</h4>
-              <p className="text-gray-400 text-sm">Indian Oil Association Approved Contractor</p>
             </div>
           </div>
         </div>

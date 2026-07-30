@@ -1,7 +1,34 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 
 export default function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', location: '', budget: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [status, setStatus] = useState(null)
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setSubmitting(true)
+    setStatus(null)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Failed')
+      setStatus('success')
+      setForm({ name: '', email: '', phone: '', service: '', location: '', budget: '', message: '' })
+    } catch {
+      setStatus('error')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
   return (
     <>
       <SEO title="Contact Us | Free Construction Quote Tamil Nadu" description="Contact SJB C&C for a free budget-friendly construction quote in Villupuram, Chennai, and across Tamil Nadu. Call +91 96295 28219 or visit our office." />
@@ -75,9 +102,8 @@ export default function Contact() {
               </div>
 
               <div className="flex gap-3 pt-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300" aria-label="Facebook"><i className="fab fa-facebook-f text-sm" /></a>
                 <a href="https://www.instagram.com/sjbcc_tn32?utm_source=qr&igsh=aWs4MHBrMHpuMGRi" target="_blank" className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300" aria-label="Instagram" rel="noreferrer"><i className="fab fa-instagram text-sm" /></a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300" aria-label="LinkedIn"><i className="fab fa-linkedin-in text-sm" /></a>
+                <a href="https://www.linkedin.com/in/balachandhiran-saravanan-14767b357" target="_blank" className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300" aria-label="LinkedIn" rel="noreferrer"><i className="fab fa-linkedin-in text-sm" /></a>
                 <a href="https://www.youtube.com/@SJBConstructionandcontracts" target="_blank" className="w-10 h-10 rounded-full bg-slate-100 hover:bg-amber-500 hover:text-white flex items-center justify-center text-slate-600 transition-all duration-300" aria-label="YouTube" rel="noreferrer"><i className="fab fa-youtube text-sm" /></a>
               </div>
             </div>
@@ -88,56 +114,58 @@ export default function Contact() {
                 <h3 className="text-lg sm:text-xl font-poppins font-bold text-primary mb-2">Send Us a Message</h3>
                 <p className="text-gray-500 text-sm mb-6 sm:mb-8">Fill out the form below and we will get back to you within 24 hours.</p>
 
-                <form className="contact-form space-y-5 sm:space-y-6">
+                <form onSubmit={handleSubmit} className="contact-form space-y-5 sm:space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Full Name *</label>
-                      <input type="text" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="Your full name" />
+                      <input type="text" name="name" value={form.name} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="Your full name" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Email Address *</label>
-                      <input type="email" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="your@email.com" />
+                      <input type="email" name="email" value={form.email} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="your@email.com" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Phone Number *</label>
-                      <input type="tel" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="+91 96295 28219" />
+                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="+91 96295 28219" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Service Interested In</label>
-                      <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
+                      <select name="service" value={form.service} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
                         <option value="">Select a service</option>
-                        <option>Home Construction</option>
-                        <option>Commercial Spaces</option>
-                        <option>Interior Design</option>
-                        <option>Renovation &amp; Remodeling</option>
-                        <option>Architecture &amp; Vastu Design</option>
-                        <option>Civil Contracting</option>
-                        <option>Project Management</option>
+                        <option value="Home Construction">Home Construction</option>
+                        <option value="Commercial Spaces">Commercial Spaces</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Renovation &amp; Remodeling">Renovation &amp; Remodeling</option>
+                        <option value="Architecture &amp; Vastu Design">Architecture &amp; Vastu Design</option>
+                        <option value="Civil Contracting">Civil Contracting</option>
+                        <option value="Project Management">Project Management</option>
                       </select>
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Project Location</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="City, Area (e.g., Villupuram Town, Chennai)" />
+                    <input type="text" name="location" value={form.location} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm" placeholder="City, Area (e.g., Villupuram Town, Chennai)" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Estimated Budget</label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
+                    <select name="budget" value={form.budget} onChange={handleChange} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm">
                       <option value="">Select budget range</option>
-                      <option>Budget Friendly</option>
-                      <option>Standard</option>
-                      <option>Premium</option>
-                      <option>Luxury</option>
-                      <option>Large Scale</option>
-                      <option>To Be Discussed</option>
+                      <option value="Budget Friendly">Budget Friendly</option>
+                      <option value="Standard">Standard</option>
+                      <option value="Premium">Premium</option>
+                      <option value="Luxury">Luxury</option>
+                      <option value="Large Scale">Large Scale</option>
+                      <option value="To Be Discussed">To Be Discussed</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Your Message *</label>
-                    <textarea rows="5" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm resize-none" placeholder="Tell us about your project requirements, timeline, and any specific needs..." />
+                    <textarea name="message" value={form.message} onChange={handleChange} rows="5" required className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all text-sm resize-none" placeholder="Tell us about your project requirements, timeline, and any specific needs..." />
                   </div>
-                  <button type="submit" className="btn-ripple w-full py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 min-h-[48px]">
-                    <i className="fas fa-paper-plane mr-2" /> Send Message
+                  {status === 'success' && <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-700 text-sm text-center">Message sent successfully! We'll get back to you within 24 hours.</div>}
+                  {status === 'error' && <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm text-center">Failed to submit. Please try again later.</div>}
+                  <button type="submit" disabled={submitting} className="btn-ripple w-full py-4 bg-amber-500 hover:bg-amber-600 disabled:bg-amber-300 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/30 min-h-[48px]">
+                    <i className="fas fa-paper-plane mr-2" /> {submitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import logoImg from '../assets/logo.png'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -7,7 +8,6 @@ const navLinks = [
   { to: '/services', label: 'Services' },
   { to: '/projects', label: 'Projects' },
   { to: '/gallery', label: 'Gallery' },
-  { to: '/testimonials', label: 'Reviews' },
   { to: '/careers', label: 'Careers' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -53,16 +53,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link to="/" className="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 relative z-[60] group">
-            <div className="logo-icon-wrap">
-              <div className="logo-icon">
-                <i className="fas fa-hard-hat text-white text-lg sm:text-xl" />
-              </div>
-              <div className="logo-glow" />
-            </div>
+            <img src={logoImg} alt="SJB C&C" className="h-10 sm:h-12 w-auto rounded-lg" />
             <div>
-              <div className="flex items-baseline gap-0">
+              <div className="flex items-baseline gap-1">
                 <span className="text-lg sm:text-xl font-extrabold text-white font-poppins tracking-tight">SJB</span>
-                <span className="text-lg sm:text-xl font-extrabold text-amber-400 font-poppins tracking-tight"> C&C</span>
+                <span className="text-lg sm:text-xl font-extrabold text-amber-400 font-poppins tracking-tight">C&C</span>
               </div>
               <p className="text-[8px] sm:text-[9px] text-gray-400 -mt-0.5 tracking-[0.2em] uppercase hidden sm:block font-medium">Construction &amp; Contracting</p>
             </div>
@@ -120,15 +115,13 @@ export default function Navbar() {
         <div className="mobile-menu-panel">
           <div className="mobile-menu-header">
             <div className="mobile-menu-logo">
-              <div className="logo-icon" style={{ width: 40, height: 40 }}>
-                <i className="fas fa-hard-hat text-white text-base" />
-              </div>
+              <img src={logoImg} alt="SJB C&C" className="h-10 sm:h-12 w-auto rounded-lg" />
               <div>
-                <div className="flex items-baseline gap-0">
-                  <span className="text-base font-extrabold text-white font-poppins">SJB</span>
-                  <span className="text-base font-extrabold text-amber-400 font-poppins"> C&C</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-lg sm:text-xl font-extrabold text-white font-poppins">SJB</span>
+                  <span className="text-lg sm:text-xl font-extrabold text-amber-400 font-poppins">C&C</span>
                 </div>
-                <p className="text-[7px] text-gray-400 tracking-[0.15em] uppercase font-medium">Construction &amp; Contracting</p>
+                <p className="text-[8px] sm:text-[9px] text-gray-400 -mt-0.5 tracking-[0.2em] uppercase font-medium">Construction &amp; Contracting</p>
               </div>
             </div>
             <button onClick={closeMenu} className="close-menu-btn" aria-label="Close menu">

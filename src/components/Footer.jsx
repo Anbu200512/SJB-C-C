@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logoImg from '../assets/logo.png'
 
 export default function Footer() {
   return (
@@ -9,19 +10,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 pt-16 sm:pt-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
           <div className="space-y-5 sm:space-y-6 sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/30 transition-shadow">
-                <i className="fas fa-hard-hat text-white text-lg sm:text-xl" />
-              </div>
+            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
+              <img src={logoImg} alt="SJB C&C" className="h-10 sm:h-12 w-auto rounded-lg" />
               <div>
-                <span className="text-lg sm:text-xl font-bold text-white font-poppins">SJB</span>
-                <span className="text-lg sm:text-xl font-bold text-amber-500 font-poppins"> C&C</span>
-                <p className="text-[8px] text-gray-500 tracking-[0.15em] uppercase font-medium -mt-0.5">Construction &amp; Contracting</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-lg sm:text-xl font-extrabold text-white font-poppins tracking-tight">SJB</span>
+                  <span className="text-lg sm:text-xl font-extrabold text-amber-400 font-poppins tracking-tight">C&C</span>
+                </div>
+                <p className="text-[8px] sm:text-[9px] text-gray-400 -mt-0.5 tracking-[0.2em] uppercase hidden sm:block font-medium">Construction &amp; Contracting</p>
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">Tamil Nadu's trusted construction startup delivering residential, commercial, and renovation projects with quality, safety, and modern innovation since 2026.</p>
             <div className="flex gap-2.5">
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5 group" aria-label="Facebook"><i className="fab fa-facebook-f text-sm text-gray-400 group-hover:text-white transition-colors" /></a>
               <a href="https://www.instagram.com/sjbcc_tn32?utm_source=qr&igsh=aWs4MHBrMHpuMGRi" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5 group" aria-label="Instagram"><i className="fab fa-instagram text-sm text-gray-400 group-hover:text-white transition-colors" /></a>
               <a href="https://www.youtube.com/@SJBConstructionandcontracts" target="_blank" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-red-600 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5 group" aria-label="YouTube"><i className="fab fa-youtube text-sm text-gray-400 group-hover:text-white transition-colors" /></a>
               <a href="https://wa.me/919629528219" className="w-10 h-10 rounded-xl bg-white/5 hover:bg-green-600 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-0.5 group" aria-label="WhatsApp"><i className="fab fa-whatsapp text-sm text-gray-400 group-hover:text-white transition-colors" /></a>
@@ -101,7 +101,7 @@ export default function Footer() {
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
-            <p className="text-gray-500 text-xs sm:text-sm">&copy; 2026 SJB C&C. All Rights Reserved. | Made with <i className="fas fa-heart text-red-500" /> in Tamil Nadu</p>
+            <p className="text-gray-500 text-xs sm:text-sm">&copy; {new Date().getFullYear()} SJB C&C. All Rights Reserved. | Made with <i className="fas fa-heart text-red-500" /> in Tamil Nadu</p>
             <div className="flex gap-4 sm:gap-6">
               <Link to="/privacy" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Privacy</Link>
               <Link to="/terms" className="text-gray-500 hover:text-amber-500 text-xs sm:text-sm transition-colors">Terms</Link>

@@ -16,13 +16,13 @@ export default function Chennai() {
 
       <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80" alt="Construction services in Chennai" className="w-full h-full object-cover opacity-30" />
+           <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Chennai-Skyline-from-Mount.jpg" alt="Chennai city skyline" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/60" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-aos="fade-up">
             <span className="text-amber-500 text-sm font-semibold tracking-wider uppercase">Service Area</span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Builders in<br /><span className="text-amber-500">Chennai</span></h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-white mt-4 mb-6">Building in<br /><span className="text-amber-500">Chennai</span></h1>
             <p className="text-gray-400 text-lg max-w-xl">Reliable construction services in Chennai — from Velachery to Tharamani. We build homes, offices, and commercial spaces with CMDA approval and modern quality standards.</p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Chennai() {
             </div>
             <div className="relative" data-aos="fade-left">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
-                <img src="https://images.pexels.com/photos/10761011/pexels-photo-10761011.jpeg?auto=compress&cs=tinysrgb" alt="Construction projects in Chennai" className="w-full h-[300px] object-cover" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Chennai_Skyline_Anna_Salai.jpg" alt="Construction projects in Chennai" className="w-full h-[300px] object-cover" />
               </div>
             </div>
           </div>
