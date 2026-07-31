@@ -103,7 +103,7 @@ export default function About() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="flex gap-3">
                     <a href="https://www.linkedin.com/in/balachandhiran-saravanan-14767b357" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fab fa-linkedin-in text-xs" /></a>
-                    <a href="mailto:sjbconstructionandcontracts@gmail.com" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fas fa-envelope text-xs" /></a>
+                    <a href="mailto:chandhiranbala97@gmail.com" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-amber-500 transition-colors"><i className="fas fa-envelope text-xs" /></a>
                   </div>
                 </div>
               </div>

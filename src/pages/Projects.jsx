@@ -62,8 +62,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 14 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 45,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 18,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -86,8 +86,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 24 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 1,20,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 45,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -109,8 +109,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 12 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 8,500 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 4,200 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -132,8 +132,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 8 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 12,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 5,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -155,8 +155,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 10 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 3,200 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 5 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 2,200 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -179,7 +179,7 @@ export default function Projects() {
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 6 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 4,800 sq ft</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 3,200 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -201,8 +201,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 18 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 25,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 12,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -225,11 +225,7 @@ export default function Projects() {
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <span><i className="fas fa-clock mr-1" /> 5 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 2,200 sq ft</span>
-                  <span className="text-amber-500 font-semibold">Budget Friendly</span>
-                </div>
-                <div className="flex gap-3">
-                  <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Pharmacy</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 1,600 sq ft</span>
                   <span className="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Mezzanine</span>
                 </div>
               </div>
@@ -247,8 +243,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 8 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 5,600 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 5 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 3,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -270,8 +266,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 16 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 68,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 30,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -293,8 +289,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 10 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 18,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 8,500 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">
@@ -316,8 +312,8 @@ export default function Projects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                  <span><i className="fas fa-clock mr-1" /> 20 Months</span>
-                  <span><i className="fas fa-ruler-combined mr-1" /> 82,000 sq ft</span>
+                  <span><i className="fas fa-clock mr-1" /> 6 Months</span>
+                  <span><i className="fas fa-ruler-combined mr-1" /> 40,000 sq ft</span>
                   <span className="text-amber-500 font-semibold">Budget Friendly</span>
                 </div>
                 <div className="flex gap-3">

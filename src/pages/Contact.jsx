@@ -191,14 +191,14 @@ export default function Contact() {
                 <h4 className="font-poppins font-semibold text-primary text-sm mb-1"><i className="fas fa-map-marker-alt text-amber-500 mr-2" />Villupuram Office</h4>
                 <p className="text-gray-500 text-xs">No. 24, Karumara Street, Sithathur, Kandachipuram Tk, Villupuram</p>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.6!2d79.4858!3d11.9416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDU2JzI5LjgiTiA3OcKwMjknMDguOSJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SJB C&C Villupuram Office" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d743.281644557333!2d79.30351725495692!3d12.014375463948808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDAwJzUxLjIiTiA3OcKwMTgnMTQuMyJF!5e0!3m2!1sen!2sin!4v1785474041741!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SJB C&C Villupuram Office" />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
               <div className="p-4 bg-white">
                 <h4 className="font-poppins font-semibold text-primary text-sm mb-1"><i className="fas fa-map-marker-alt text-amber-500 mr-2" />Chennai Office</h4>
                 <p className="text-gray-500 text-xs">No. 10, Kennedy Street, MG Nagar, Tharamani, Chennai</p>
               </div>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d80.25!3d12.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzQ4LjAiTiA4MMKwMTUnMDAuMCJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SJB C&C Chennai Office" />
+              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.825881087189!2d80.23879217507664!3d12.982985987333418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU4JzU4LjgiTiA4MMKwMTQnMjguOSJF!5e0!3m2!1sen!2sin!4v1785472956204!5m2!1sen!2sin" width="100%" height="300" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="SJB C&C Chennai Office" />
             </div>
           </div>
         </div>
